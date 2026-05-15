@@ -1,0 +1,12 @@
+export {HomePage} from './components/HomePage';
+export {Hero} from './components/Hero';
+export {CategoryRow} from './components/CategoryRow';
+export {ValueStrip} from './components/ValueStrip';
+export {TopPicks} from './components/TopPicks';
+export {FeatureStrip} from './components/FeatureStrip';
+export {ShopByConcern} from './components/ShopByConcern';
+export {ProofSection} from './components/ProofSection';
+export {VillageStories} from './components/VillageStories';
+export {MostLoved} from './components/MostLoved';
+export {Heritage} from './components/Heritage';
+export {FEATURED_COLLECTIONS_QUERY, HOMEPAGE_PRODUCTS_QUERY} from './queries/home';
