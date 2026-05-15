@@ -225,7 +225,7 @@ export function ProductCard({product, loading}: ProductCardProps) {
             {(fetcher: FetcherWithComponents<any>) => (
               <button
                 type="submit"
-                className="btn btn-primary magil-product-card__add-btn"
+                className="btn btn-vibrant-red magil-product-card__add-btn"
                 disabled={!availableForSale || fetcher.state !== 'idle'}
               >
                 {!availableForSale

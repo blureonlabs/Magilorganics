@@ -32,7 +32,7 @@ export function AddToCartButton({
       {(fetcher: FetcherWithComponents<any>) => (
         <button
           type="submit"
-          className={className ?? 'btn btn-primary'}
+          className={className ?? 'btn btn-vibrant-red'}
           disabled={!availableForSale || fetcher.state !== 'idle'}
           style={{
             width: '100%',

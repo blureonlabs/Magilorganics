@@ -1,7 +1,8 @@
 import {Link} from 'react-router';
 import {PeacockBackdrop} from '~/shared/motifs/PeacockBackdrop';
 import {PeacockMark} from '~/shared/motifs/PeacockMark';
-import {LeafIcon, ArrowRightIcon} from '~/shared/icons';
+import {DoodleUnderline, DoodleArrow} from '~/shared/motifs/DoodleElements';
+import {LeafIcon} from '~/shared/icons';
 
 export function Hero() {
   return (
@@ -21,15 +22,9 @@ export function Hero() {
             <br />
             <em className="home-hero__heading-accent">
               tradition,
-              <svg className="home-hero__underline" viewBox="0 0 280 12" preserveAspectRatio="none">
-                <path
-                  d="M2 8 Q 70 2, 140 6 T 278 8"
-                  stroke="var(--magil-gold)"
-                  strokeWidth="2.5"
-                  fill="none"
-                  strokeLinecap="round"
-                />
-              </svg>
+              <span className="home-hero__underline">
+                <DoodleUnderline width={200} color="var(--magil-gold)" strokeWidth={2.5} />
+              </span>
             </em>{' '}
             <br />
             brewed at home.
@@ -47,8 +42,8 @@ export function Hero() {
           </p>
 
           <div className="home-hero__cta">
-            <Link to="/products/kabasura-kudineer" className="btn btn-primary">
-              Shop the Kabasura <ArrowRightIcon size={16} />
+            <Link to="/products/kabasura-kudineer" className="btn btn-vibrant-red">
+              Shop the Kabasura <DoodleArrow size={18} color="#fff" />
             </Link>
             <Link to="/collections" className="btn btn-outline">
               Explore the catalog

@@ -80,7 +80,7 @@ export function StickyATC({product, selectedVariant, atcRef}: StickyATCProps) {
           <AddToCartButton
             variantId={selectedVariant.id}
             availableForSale={selectedVariant.availableForSale}
-            className="btn btn-gold"
+            className="btn btn-vibrant-gold"
             style={{minHeight: 44, fontSize: 13}}
           />
         </div>

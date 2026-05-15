@@ -147,7 +147,7 @@ export function OrderSummary({cart}: OrderSummaryProps) {
         {cart.checkoutUrl && (
           <a
             href={cart.checkoutUrl}
-            className="btn btn-primary"
+            className="btn btn-vibrant-red"
             style={{
               display: 'block',
               width: '100%',
