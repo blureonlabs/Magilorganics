@@ -1,5 +1,6 @@
 import {Form} from 'react-router';
 import {SearchIcon, CloseIcon} from '~/shared/icons';
+import {Nelli} from '~/shared/motifs/HerbIllustrations';
 
 interface SearchHeroProps {
   term: string;
@@ -8,6 +9,10 @@ interface SearchHeroProps {
 export function SearchHero({term}: SearchHeroProps) {
   return (
     <section className="search-hero">
+      {/* Decorative Nelli accent */}
+      <div className="search-hero__nelli-accent" aria-hidden="true" style={{pointerEvents: 'none'}}>
+        <Nelli size={40} opacity={0.06} />
+      </div>
       <div className="search-hero__inner">
         <h1 className="search-hero__heading serif">
           Find your{' '}
@@ -46,6 +51,14 @@ const searchHeroStyles = /* css */ `
     padding: 40px 24px 50px;
     position: relative;
     overflow: hidden;
+  }
+  .search-hero__nelli-accent {
+    position: absolute;
+    top: 20px;
+    right: 24px;
+  }
+  @media (max-width: 767px) {
+    .search-hero__nelli-accent { display: none; }
   }
   @media (min-width: 768px) {
     .search-hero { padding: 40px 48px 50px; }

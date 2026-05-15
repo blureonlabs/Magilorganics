@@ -1,4 +1,5 @@
 import {PeacockMark} from '~/shared/motifs/PeacockMark';
+import {MayilFeather} from '~/shared/motifs/MayilFeather';
 
 export function Heritage() {
   return (
@@ -27,6 +28,11 @@ export function Heritage() {
           <div className="heritage__title">
             FOUNDER &middot; 4th GENERATION SIDDHA FAMILY &middot; KARAIKUDI
           </div>
+        </div>
+
+        {/* Decorative MayilFeather accent */}
+        <div className="heritage__mayil-feather" aria-hidden="true" style={{pointerEvents: 'none'}}>
+          <MayilFeather size={60} opacity={0.08} />
         </div>
       </div>
 
@@ -93,4 +99,12 @@ const heritageStyles = /* css */ `
     letter-spacing: normal;
   }
 
+  .heritage__mayil-feather {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+  }
+  @media (max-width: 767px) {
+    .heritage__mayil-feather { display: none; }
+  }
 `;

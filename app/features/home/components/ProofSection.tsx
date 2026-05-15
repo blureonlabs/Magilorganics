@@ -1,3 +1,5 @@
+import {Mangai} from '~/shared/motifs/HerbIllustrations';
+
 const PROOFS = [
   {
     title: 'Glyphosate-Free',
@@ -19,6 +21,10 @@ const PROOFS = [
 export function ProofSection() {
   return (
     <section className="proof-section">
+      {/* Decorative Mangai accent */}
+      <div className="proof-section__mangai-accent" aria-hidden="true" style={{pointerEvents: 'none'}}>
+        <Mangai size={40} opacity={0.08} />
+      </div>
       <div className="proof-section__inner">
         <div className="proof-section__header">
           <div className="eyebrow">Proof, not promises</div>
@@ -50,6 +56,16 @@ const proofStyles = /* css */ `
   .proof-section {
     padding: 90px 24px;
     background: var(--magil-paper);
+    position: relative;
+    overflow: hidden;
+  }
+  .proof-section__mangai-accent {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+  @media (max-width: 767px) {
+    .proof-section__mangai-accent { display: none; }
   }
   @media (min-width: 768px) {
     .proof-section { padding: 90px 48px; }

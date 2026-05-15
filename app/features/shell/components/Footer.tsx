@@ -34,6 +34,14 @@ export function Footer() {
         />
       </svg>
 
+      {/* Gopuram watermark */}
+      <svg style={{position: 'absolute', bottom: 20, right: 40, width: 120, height: 100, opacity: 0.04}} viewBox="0 0 120 100" aria-hidden="true">
+        <g stroke="var(--magil-gold)" strokeWidth="1.5" fill="none">
+          <path d="M20 95 L20 60 L35 60 L35 40 L45 40 L45 25 L55 25 L55 15 L65 15 L65 25 L75 25 L75 40 L85 40 L85 60 L100 60 L100 95"/>
+          <circle cx="60" cy="10" r="4" fill="var(--magil-gold)"/>
+        </g>
+      </svg>
+
       <div className="magil-footer__inner">
         {/* Newsletter section */}
         <div className="magil-footer__newsletter">

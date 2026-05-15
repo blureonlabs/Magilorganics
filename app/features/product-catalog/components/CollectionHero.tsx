@@ -1,5 +1,6 @@
 import {Link} from 'react-router';
 import {MukkuCorner} from '~/shared/motifs/MukkuCorner';
+import {MayilWave} from '~/shared/motifs/MayilWave';
 
 interface CollectionHeroProps {
   title: string;
@@ -43,6 +44,11 @@ export function CollectionHero({
           <div className="magil-collection-hero__count">
             {productCount} {productCount === 1 ? 'product' : 'products'}
           </div>
+        </div>
+
+        {/* Decorative MayilWave bottom border */}
+        <div className="magil-collection-hero__wave-border" aria-hidden="true" style={{pointerEvents: 'none'}}>
+          <MayilWave opacity={0.08} />
         </div>
       </section>
 
@@ -129,6 +135,17 @@ const collectionHeroStyles = /* css */ `
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--magil-ochre);
+  }
+
+  .magil-collection-hero__wave-border {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+  }
+  @media (max-width: 767px) {
+    .magil-collection-hero__wave-border { display: none; }
   }
 
   @media (min-width: 768px) {

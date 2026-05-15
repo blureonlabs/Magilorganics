@@ -1,4 +1,5 @@
 import {Link} from 'react-router';
+import {Manjal} from '~/shared/motifs/HerbIllustrations';
 import {
   DropletIcon,
   WheatIcon,
@@ -64,6 +65,10 @@ const CONCERNS = [
 export function ShopByConcern() {
   return (
     <section className="shop-concern">
+      {/* Decorative Manjal accent */}
+      <div className="shop-concern__manjal-accent" aria-hidden="true" style={{pointerEvents: 'none'}}>
+        <Manjal size={80} opacity={0.08} />
+      </div>
       <div className="shop-concern__inner">
         <div className="shop-concern__header">
           <div className="eyebrow">
@@ -119,6 +124,15 @@ const shopConcernStyles = /* css */ `
     padding: 90px 24px;
     background: linear-gradient(180deg, var(--magil-cream) 0%, var(--magil-cream-warm) 100%);
     position: relative;
+    overflow: hidden;
+  }
+  .shop-concern__manjal-accent {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+  }
+  @media (max-width: 767px) {
+    .shop-concern__manjal-accent { display: none; }
   }
   @media (min-width: 768px) {
     .shop-concern { padding: 90px 48px; }

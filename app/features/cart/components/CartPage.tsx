@@ -5,6 +5,7 @@ import {EmptyCart} from './EmptyCart';
 import {FreeShippingBar} from './FreeShippingBar';
 import {CartLineItem} from './CartLineItem';
 import {OrderSummary} from './OrderSummary';
+import {VairamBorder} from '~/shared/motifs/VairamBorder';
 
 interface CartPageProps {
   cart: CartApiQueryFragment | null;
@@ -165,8 +166,13 @@ export function CartPage({cart: originalCart}: CartPageProps) {
               })}
             </div>
 
+            {/* Decorative divider */}
+            <div style={{marginTop: 40, marginBottom: 10}} aria-hidden="true">
+              <VairamBorder />
+            </div>
+
             {/* Frequently bought together placeholder */}
-            <div style={{marginTop: 50}}>
+            <div style={{marginTop: 20}}>
               <div
                 style={{
                   display: 'flex',

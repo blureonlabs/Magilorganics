@@ -1,3 +1,5 @@
+import {MannPaanai, Ammikkal} from '~/shared/motifs/HerbIllustrations';
+
 export function FeatureStrip() {
   return (
     <section className="feature-strip-section">
@@ -29,6 +31,14 @@ export function FeatureStrip() {
               </div>
             ))}
           </div>
+        </div>
+
+        {/* Decorative motifs */}
+        <div className="feature-strip__motif-left" aria-hidden="true" style={{pointerEvents: 'none'}}>
+          <MannPaanai size={50} opacity={0.1} />
+        </div>
+        <div className="feature-strip__motif-right" aria-hidden="true" style={{pointerEvents: 'none'}}>
+          <Ammikkal size={50} opacity={0.1} />
         </div>
       </div>
 
@@ -110,5 +120,20 @@ const featureStripStyles = /* css */ `
     font-size: 12px;
     color: rgba(251,246,236,0.6);
     margin-top: 4px;
+  }
+
+  .feature-strip__motif-left {
+    position: absolute;
+    bottom: 16px;
+    left: 20px;
+  }
+  .feature-strip__motif-right {
+    position: absolute;
+    bottom: 16px;
+    right: 20px;
+  }
+  @media (max-width: 767px) {
+    .feature-strip__motif-left,
+    .feature-strip__motif-right { display: none; }
   }
 `;

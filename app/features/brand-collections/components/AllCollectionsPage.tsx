@@ -1,5 +1,6 @@
 import {Link} from 'react-router';
 import {PeacockMark} from '~/shared/motifs/PeacockMark';
+import {VaazhaiIlai} from '~/shared/motifs/HerbIllustrations';
 import {BrandSection} from './BrandSection';
 import {CollectionCard} from './CollectionCard';
 import {
@@ -165,6 +166,11 @@ export function AllCollectionsPage({collections}: AllCollectionsPageProps) {
                 Shop all 5 oils &rarr;
               </Link>
             </div>
+          </div>
+
+          {/* Decorative VaazhaiIlai accent */}
+          <div className="collections-magil__vaazhai" aria-hidden="true" style={{pointerEvents: 'none'}}>
+            <VaazhaiIlai size={60} opacity={0.06} />
           </div>
         </div>
       </section>
@@ -341,5 +347,14 @@ const allCollectionsStyles = /* css */ `
     font-size: 12px;
     align-self: flex-start;
     position: relative;
+  }
+
+  .collections-magil__vaazhai {
+    display: flex;
+    justify-content: center;
+    margin-top: 32px;
+  }
+  @media (max-width: 767px) {
+    .collections-magil__vaazhai { display: none; }
   }
 `;

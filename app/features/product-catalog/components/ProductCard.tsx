@@ -2,6 +2,7 @@ import {Link} from 'react-router';
 import {Image, Money, CartForm} from '@shopify/hydrogen';
 import type {FetcherWithComponents} from 'react-router';
 import {BrandBadge} from './BrandBadge';
+import {Tulsi} from '~/shared/motifs/HerbIllustrations';
 
 /**
  * Product node shape from the Storefront API collection query.
@@ -130,7 +131,7 @@ export function ProductCard({product, loading}: ProductCardProps) {
             />
           ) : (
             <div className="magil-product-card__image-placeholder">
-              <PlaceholderIcon />
+              <Tulsi size={50} opacity={0.2} />
             </div>
           )}
         </div>
