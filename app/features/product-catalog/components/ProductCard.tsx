@@ -148,9 +148,7 @@ export function ProductCard({product, loading}: ProductCardProps) {
             />
           ) : (
             <div className="magil-product-card__image-placeholder">
-              <span className="serif" style={{color: 'var(--magil-ink-soft)'}}>
-                {title.charAt(0)}
-              </span>
+              <span>{title.charAt(0)}</span>
             </div>
           )}
         </div>
@@ -252,18 +250,18 @@ const productCardStyles = /* css */ `
   .magil-product-card {
     position: relative;
     background: #fff;
-    border: 1px solid var(--magil-line-soft);
-    border-radius: 18px;
+    border: 1px solid rgba(229, 213, 183, 0.5);
+    border-radius: 16px;
     overflow: hidden;
-    box-shadow: var(--magil-shadow);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
     display: flex;
     flex-direction: column;
-    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
   }
 
   .magil-product-card:hover {
     transform: translateY(-4px);
-    box-shadow: 0 16px 36px rgba(139, 14, 32, 0.12);
+    box-shadow: 0 12px 32px rgba(139, 14, 32, 0.1);
   }
 
   .magil-product-card__link {
@@ -276,14 +274,14 @@ const productCardStyles = /* css */ `
 
   .magil-product-card__brand-badge {
     position: absolute;
-    top: 12px;
-    left: 12px;
+    top: 10px;
+    left: 10px;
     z-index: 3;
   }
 
   .magil-product-card__status-badge {
     position: absolute;
-    left: 12px;
+    left: 10px;
     z-index: 2;
     color: #fff;
     font-size: 10px;
@@ -295,10 +293,11 @@ const productCardStyles = /* css */ `
   }
 
   .magil-product-card__image-wrap {
-    background: var(--magil-cream-warm);
+    background: var(--magil-cream);
     aspect-ratio: 1 / 1;
     position: relative;
     overflow: hidden;
+    border-bottom: 1px solid rgba(229, 213, 183, 0.3);
   }
 
   .magil-product-card__image-wrap img {
@@ -307,6 +306,11 @@ const productCardStyles = /* css */ `
     width: 100%;
     height: 100%;
     object-fit: cover;
+    transition: transform 0.3s ease;
+  }
+
+  .magil-product-card:hover .magil-product-card__image-wrap img {
+    transform: scale(1.04);
   }
 
   .magil-product-card__image-placeholder {
@@ -315,20 +319,25 @@ const productCardStyles = /* css */ `
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
-    color: var(--magil-ink-soft);
+    font-size: 72px;
+    font-family: var(--font-display);
+    font-weight: 500;
+    color: var(--magil-cream-deep);
+    letter-spacing: -0.02em;
+    opacity: 0.7;
   }
 
   .magil-product-card__details {
-    padding: 16px 16px 12px;
+    padding: 14px 14px 10px;
     flex: 1;
   }
 
   .magil-product-card__title {
     margin: 0;
-    font-size: 18px;
+    font-size: 17px;
+    font-weight: 700;
     color: var(--magil-ink);
-    line-height: 1.2;
+    line-height: 1.25;
   }
 
   .magil-product-card__tamil {
@@ -341,19 +350,22 @@ const productCardStyles = /* css */ `
   .magil-product-card__rating {
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     margin-top: 8px;
-    font-size: 12px;
+    font-size: 14px;
   }
 
   .magil-product-card__stars {
-    color: var(--magil-gold);
+    color: #E8A317;
     letter-spacing: 1px;
+    font-size: 14px;
+    text-shadow: 0 0 1px rgba(232, 163, 23, 0.3);
   }
 
   .magil-product-card__rating-text {
     color: var(--magil-ink-soft);
-    font-weight: 600;
+    font-weight: 700;
+    font-size: 13px;
   }
 
   .magil-product-card__price-row {
@@ -364,26 +376,28 @@ const productCardStyles = /* css */ `
   }
 
   .magil-product-card__price {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 700;
-    color: var(--magil-red-deep);
+    color: var(--magil-ink);
+    font-family: var(--font-display);
   }
 
   .magil-product-card__compare-price {
     font-size: 14px;
     color: var(--magil-ink-soft);
     text-decoration: line-through;
+    opacity: 0.7;
   }
 
   .magil-product-card__variant-selector {
-    padding: 0 16px;
+    padding: 0 14px;
   }
 
   .magil-product-card__size-select {
     width: 100%;
     padding: 8px 12px;
     border: 1px solid var(--magil-line);
-    border-radius: 8px;
+    border-radius: 10px;
     background: var(--magil-cream);
     font-family: inherit;
     font-size: 13px;
@@ -392,46 +406,59 @@ const productCardStyles = /* css */ `
   }
 
   .magil-product-card__cart-action {
-    padding: 12px 16px 16px;
+    padding: 10px 14px 14px;
+    margin-top: auto;
   }
 
   .magil-product-card__add-btn {
     width: 100%;
     padding: 12px 16px;
-    font-size: 12px;
+    font-size: 13px;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+    border-radius: 12px;
+    min-height: 46px;
   }
 
-  /* Mobile: smaller text and spacing */
+  /* Mobile adjustments */
   @media (max-width: 767px) {
     .magil-product-card__title {
-      font-size: 14px;
+      font-size: 15px;
+      font-weight: 700;
     }
     .magil-product-card__details {
-      padding: 10px 10px 8px;
+      padding: 12px 12px 8px;
     }
     .magil-product-card__price {
-      font-size: 16px;
+      font-size: 19px;
     }
     .magil-product-card__rating {
-      font-size: 11px;
+      font-size: 13px;
+    }
+    .magil-product-card__stars {
+      font-size: 13px;
     }
     .magil-product-card__rating-text {
-      font-size: 11px;
+      font-size: 12px;
     }
     .magil-product-card__cart-action {
-      padding: 8px 10px 10px;
+      padding: 8px 12px 12px;
     }
     .magil-product-card__add-btn {
       width: 100%;
       min-height: 44px;
-      padding: 10px 12px;
+      padding: 12px 14px;
       font-size: 12px;
+      border-radius: 12px;
     }
     .magil-product-card__variant-selector {
-      padding: 0 10px;
+      padding: 0 12px;
     }
     .magil-product-card__compare-price {
       font-size: 12px;
+    }
+    .magil-product-card__image-placeholder {
+      font-size: 56px;
     }
   }
 `;

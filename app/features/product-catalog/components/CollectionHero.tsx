@@ -83,8 +83,8 @@ export function CollectionHero({
 
 const collectionHeroStyles = /* css */ `
   .magil-collection-hero {
-    background: linear-gradient(135deg, var(--magil-cream) 0%, var(--magil-cream-warm) 100%);
-    padding: 40px 20px 32px;
+    background: linear-gradient(160deg, var(--magil-cream) 0%, var(--magil-cream-warm) 60%, var(--magil-cream-deep) 100%);
+    padding: 32px 16px 28px;
     position: relative;
     overflow: hidden;
   }
@@ -107,14 +107,16 @@ const collectionHeroStyles = /* css */ `
   }
 
   .magil-collection-hero__breadcrumb {
-    font-size: 13px;
+    font-size: 14px;
     color: var(--magil-ink-soft);
     margin-bottom: 16px;
+    line-height: 1.5;
   }
 
   .magil-collection-hero__breadcrumb a {
     color: inherit;
     text-decoration: none;
+    transition: color 0.15s ease;
   }
 
   .magil-collection-hero__breadcrumb a:hover {
@@ -131,35 +133,40 @@ const collectionHeroStyles = /* css */ `
     font-size: 48px;
     font-weight: 500;
     line-height: 1;
-    margin: 10px 0 12px;
+    margin: 10px 0 20px;
     color: var(--magil-ink);
     letter-spacing: -0.02em;
   }
 
   .magil-collection-hero__description {
     max-width: 600px;
-    margin-top: 12px;
+    margin-top: 8px;
     color: var(--magil-ink-soft);
     font-size: 16px;
     line-height: 1.6;
   }
 
   .magil-collection-hero__count {
-    margin-top: 16px;
+    margin-top: 14px;
     font-size: 13px;
-    font-weight: 600;
-    letter-spacing: 0.06em;
+    font-weight: 700;
+    letter-spacing: 0.1em;
     text-transform: uppercase;
-    color: var(--magil-ink-soft);
+    color: var(--magil-ochre);
   }
 
   @media (min-width: 768px) {
     .magil-collection-hero {
-      padding: 60px 48px 40px;
+      padding: 60px 48px 44px;
     }
 
     .magil-collection-hero__title {
       font-size: 72px;
+      margin-bottom: 24px;
+    }
+
+    .magil-collection-hero__breadcrumb {
+      font-size: 15px;
     }
 
     .magil-collection-hero__peacock {
@@ -169,8 +176,13 @@ const collectionHeroStyles = /* css */ `
   }
 
   @media (max-width: 767px) {
+    .magil-collection-hero {
+      padding: 28px 16px 24px;
+    }
+
     .magil-collection-hero__title {
       font-size: 36px;
+      margin-bottom: 16px;
     }
 
     .magil-collection-hero__description {
