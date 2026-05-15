@@ -14,10 +14,7 @@ export function MostLoved({products}: MostLovedProps) {
       <div className="most-loved__inner">
         <div className="most-loved__header">
           <div>
-            <div className="eyebrow">
-              Most Loved &middot;{' '}
-              {'\u0B85\u0BA4\u0BBF\u0B95 \u0BB5\u0BBF\u0BB1\u0BCD\u0BAA\u0BA9\u0BC8'}
-            </div>
+            <div className="eyebrow">Most Loved</div>
             <h2 className="serif most-loved__heading">
               The{' '}
               <em className="most-loved__accent">amma-approved</em> picks.

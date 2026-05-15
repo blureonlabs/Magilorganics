@@ -12,6 +12,14 @@ const TAB_TAG_MAP: Record<string, string[]> = {
   Kits: ['kit'],
 };
 
+const TAB_COLLECTION_MAP: Record<string, string> = {
+  Kudineers: '/collections/kudineers',
+  Thailams: '/collections/thailams',
+  Tablets: '/collections/tablets',
+  Juices: '/collections/herbal-juices',
+  Kits: '/collections/kits',
+};
+
 interface TopPicksProps {
   products: any[];
 }
@@ -33,7 +41,7 @@ export function TopPicks({products}: TopPicksProps) {
       <div className="top-picks__inner">
         <div className="top-picks__header">
           <div>
-            <div className="eyebrow">Top Picks &middot; {'\u0B85\u0BA9\u0BCD\u0BB1\u0BBE\u0B9F \u0BAA\u0BAF\u0BA9\u0BCD\u0BAA\u0BBE\u0B9F\u0BC1'}</div>
+            <div className="eyebrow">Top Picks</div>
             <h2 className="serif top-picks__heading">
               What our{' '}
               <em className="top-picks__heading-accent">kudumbam</em> loves
@@ -63,7 +71,7 @@ export function TopPicks({products}: TopPicksProps) {
         </div>
 
         <div className="top-picks__view-all">
-          <Link to="/collections" className="btn btn-dark">
+          <Link to={TAB_COLLECTION_MAP[active] || '/collections'} className="btn btn-dark">
             View all {active.toLowerCase()} &rarr;
           </Link>
         </div>

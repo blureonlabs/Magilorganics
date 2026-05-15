@@ -66,24 +66,8 @@ function getProductBadge(tags: string[]) {
   return null;
 }
 
-/** Check if a size/variant selector is relevant */
-function hasSizeVariants(
-  variants: ProductCardProduct['variants'],
-): boolean {
-  if (variants.nodes.length <= 1) return false;
-  // Only show selector if there's a "Size" or "Weight" option
-  return variants.nodes.some((v) =>
-    v.selectedOptions.some(
-      (o) =>
-        o.name.toLowerCase() === 'size' ||
-        o.name.toLowerCase() === 'weight',
-    ),
-  );
-}
-
 export function ProductCard({product, loading}: ProductCardProps) {
   const {
-    id,
     title,
     handle,
     vendor,
@@ -104,7 +88,8 @@ export function ProductCard({product, loading}: ProductCardProps) {
 
   const firstAvailableVariant =
     variants.nodes.find((v) => v.availableForSale) || variants.nodes[0];
-  const showSizeSelector = hasSizeVariants(variants);
+
+  const hasMultipleVariants = variants.nodes.length > 1;
 
   return (
     <div className="magil-product-card">
@@ -113,7 +98,7 @@ export function ProductCard({product, loading}: ProductCardProps) {
         prefetch="intent"
         className="magil-product-card__link"
       >
-        {/* Brand badge — top left */}
+        {/* Brand badge -- top left */}
         {isVillagePharma && (
           <div className="magil-product-card__brand-badge">
             <BrandBadge vendor={vendor} size="sm" />
@@ -145,7 +130,7 @@ export function ProductCard({product, loading}: ProductCardProps) {
             />
           ) : (
             <div className="magil-product-card__image-placeholder">
-              <span>{title.charAt(0)}</span>
+              <PlaceholderIcon />
             </div>
           )}
         </div>
@@ -156,6 +141,9 @@ export function ProductCard({product, loading}: ProductCardProps) {
 
           {/* Price */}
           <div className="magil-product-card__price-row">
+            {hasMultipleVariants && (
+              <span className="magil-product-card__price-from">From</span>
+            )}
             <span className="magil-product-card__price">
               <Money data={priceRange.minVariantPrice} />
             </span>
@@ -168,29 +156,7 @@ export function ProductCard({product, loading}: ProductCardProps) {
         </div>
       </Link>
 
-      {/* Size variant selector */}
-      {showSizeSelector && (
-        <div className="magil-product-card__variant-selector">
-          <select
-            className="magil-product-card__size-select"
-            defaultValue={firstAvailableVariant?.id}
-            aria-label="Select size"
-          >
-            {variants.nodes.map((variant) => (
-              <option
-                key={variant.id}
-                value={variant.id}
-                disabled={!variant.availableForSale}
-              >
-                {variant.title}
-                {!variant.availableForSale ? ' (Sold out)' : ''}
-              </option>
-            ))}
-          </select>
-        </div>
-      )}
-
-      {/* Add to Cart */}
+      {/* Add to Cart -- uses first available variant, no dropdown */}
       {firstAvailableVariant && (
         <div className="magil-product-card__cart-action">
           <CartForm
@@ -215,7 +181,7 @@ export function ProductCard({product, loading}: ProductCardProps) {
                   ? 'Sold out'
                   : fetcher.state !== 'idle'
                     ? 'Adding...'
-                    : 'Add to cart \u2192'}
+                    : 'Add to cart'}
               </button>
             )}
           </CartForm>
@@ -228,6 +194,47 @@ export function ProductCard({product, loading}: ProductCardProps) {
         }}
       />
     </div>
+  );
+}
+
+/** Subtle product silhouette placeholder when no image is available */
+function PlaceholderIcon() {
+  return (
+    <svg
+      width="80"
+      height="80"
+      viewBox="0 0 80 80"
+      fill="none"
+      aria-hidden="true"
+      className="magil-product-card__placeholder-svg"
+    >
+      {/* Pouch / bottle silhouette */}
+      <path
+        d="M30 18 Q 30 12, 34 12 H 46 Q 50 12, 50 18 V 22 H 30 Z"
+        fill="currentColor"
+        opacity="0.18"
+      />
+      <path
+        d="M26 22 H 54 Q 56 22, 56 26 V 64 Q 56 68, 52 68 H 28 Q 24 68, 24 64 V 26 Q 24 22, 26 22 Z"
+        fill="currentColor"
+        opacity="0.13"
+      />
+      {/* Small leaf accent */}
+      <path
+        d="M40 38 Q 36 44, 40 50 Q 44 44, 40 38 Z"
+        fill="currentColor"
+        opacity="0.22"
+      />
+      <line
+        x1="40"
+        y1="50"
+        x2="40"
+        y2="56"
+        stroke="currentColor"
+        strokeWidth="1"
+        opacity="0.18"
+      />
+    </svg>
   );
 }
 
@@ -304,11 +311,10 @@ const productCardStyles = /* css */ `
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 72px;
-    font-family: var(--font-display);
-    font-weight: 500;
     color: var(--magil-cream-deep);
-    letter-spacing: -0.02em;
+  }
+
+  .magil-product-card__placeholder-svg {
     opacity: 0.7;
   }
 
@@ -328,8 +334,14 @@ const productCardStyles = /* css */ `
   .magil-product-card__price-row {
     display: flex;
     align-items: baseline;
-    gap: 8px;
+    gap: 6px;
     margin-top: 10px;
+  }
+
+  .magil-product-card__price-from {
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--magil-ink-soft);
   }
 
   .magil-product-card__price {
@@ -344,22 +356,6 @@ const productCardStyles = /* css */ `
     color: var(--magil-ink-soft);
     text-decoration: line-through;
     opacity: 0.7;
-  }
-
-  .magil-product-card__variant-selector {
-    padding: 0 14px;
-  }
-
-  .magil-product-card__size-select {
-    width: 100%;
-    padding: 8px 12px;
-    border: 1px solid var(--magil-line);
-    border-radius: 10px;
-    background: var(--magil-cream);
-    font-family: inherit;
-    font-size: 13px;
-    color: var(--magil-ink);
-    cursor: pointer;
   }
 
   .magil-product-card__cart-action {
@@ -389,6 +385,9 @@ const productCardStyles = /* css */ `
     .magil-product-card__price {
       font-size: 19px;
     }
+    .magil-product-card__price-from {
+      font-size: 12px;
+    }
     .magil-product-card__cart-action {
       padding: 8px 12px 12px;
     }
@@ -399,14 +398,8 @@ const productCardStyles = /* css */ `
       font-size: 12px;
       border-radius: 12px;
     }
-    .magil-product-card__variant-selector {
-      padding: 0 12px;
-    }
     .magil-product-card__compare-price {
       font-size: 12px;
-    }
-    .magil-product-card__image-placeholder {
-      font-size: 56px;
     }
   }
 `;
