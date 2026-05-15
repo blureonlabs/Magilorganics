@@ -19,11 +19,11 @@ export function PeacockBackdrop({className}: PeacockBackdropProps) {
           position: 'absolute',
           top: '5%',
           right: '5%',
-          width: '40%',
-          maxWidth: 420,
+          width: '15%',
+          maxWidth: 180,
           height: 'auto',
           aspectRatio: '1',
-          opacity: 0.08,
+          opacity: 0.03,
           zIndex: 1,
         }}
         viewBox="0 0 200 200"
@@ -45,11 +45,11 @@ export function PeacockBackdrop({className}: PeacockBackdropProps) {
           position: 'absolute',
           bottom: '8%',
           left: '2%',
-          width: '20%',
-          maxWidth: 240,
+          width: '10%',
+          maxWidth: 120,
           height: 'auto',
           aspectRatio: '1',
-          opacity: 0.05,
+          opacity: 0.03,
           zIndex: 1,
         }}
         viewBox="0 0 200 200"

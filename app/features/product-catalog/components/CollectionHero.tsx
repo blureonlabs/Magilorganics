@@ -93,10 +93,10 @@ const collectionHeroStyles = /* css */ `
     position: absolute;
     top: 5%;
     right: 5%;
-    width: 35%;
-    max-width: 380px;
+    width: 15%;
+    max-width: 180px;
     aspect-ratio: 1;
-    opacity: 0.06;
+    opacity: 0.03;
     pointer-events: none;
   }
 
@@ -163,8 +163,8 @@ const collectionHeroStyles = /* css */ `
     }
 
     .magil-collection-hero__peacock {
-      width: 35%;
-      max-width: 400px;
+      width: 15%;
+      max-width: 180px;
     }
   }
 

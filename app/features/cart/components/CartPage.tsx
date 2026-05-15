@@ -50,10 +50,10 @@ export function CartPage({cart: originalCart}: CartPageProps) {
               position: 'absolute',
               top: '5%',
               right: '5%',
-              width: '35%',
-              maxWidth: 380,
+              width: '15%',
+              maxWidth: 180,
               aspectRatio: '1',
-              opacity: 0.06,
+              opacity: 0.03,
             }}
             viewBox="0 0 200 200"
           >

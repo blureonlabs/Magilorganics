@@ -123,10 +123,10 @@ const heritageStyles = /* css */ `
     position: absolute;
     bottom: 5%;
     right: 5%;
-    width: 35%;
-    max-width: 380px;
+    width: 15%;
+    max-width: 180px;
     aspect-ratio: 1;
-    opacity: 0.06;
+    opacity: 0.03;
     z-index: 1;
     pointer-events: none;
   }

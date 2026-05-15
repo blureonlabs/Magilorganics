@@ -163,10 +163,10 @@ const brandSectionStyles = /* css */ `
     position: absolute;
     right: 5%;
     top: 5%;
-    width: 35%;
-    max-width: 200px;
+    width: 15%;
+    max-width: 180px;
     aspect-ratio: 1;
-    opacity: 0.08;
+    opacity: 0.03;
     pointer-events: none;
   }
   .brand-section__stats-num {

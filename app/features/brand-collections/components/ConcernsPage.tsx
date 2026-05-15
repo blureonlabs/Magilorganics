@@ -345,10 +345,10 @@ const concernsStyles = /* css */ `
     position: absolute;
     top: 5%;
     right: 5%;
-    width: 35%;
-    max-width: 400px;
+    width: 15%;
+    max-width: 180px;
     aspect-ratio: 1;
-    opacity: 0.06;
+    opacity: 0.03;
     pointer-events: none;
   }
   .concerns-hero__inner {
@@ -571,10 +571,10 @@ const concernsStyles = /* css */ `
     position: absolute;
     bottom: 5%;
     right: 5%;
-    width: 35%;
+    width: 15%;
     max-width: 320px;
     aspect-ratio: 1;
-    opacity: 0.07;
+    opacity: 0.03;
     pointer-events: none;
   }
   .vaidyar-cta__content {

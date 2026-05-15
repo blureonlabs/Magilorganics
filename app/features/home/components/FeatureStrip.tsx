@@ -89,10 +89,10 @@ const featureStripStyles = /* css */ `
     position: absolute;
     top: 5%;
     right: 5%;
-    width: 35%;
-    max-width: 380px;
+    width: 15%;
+    max-width: 180px;
     aspect-ratio: 1;
-    opacity: 0.08;
+    opacity: 0.03;
     pointer-events: none;
   }
 
