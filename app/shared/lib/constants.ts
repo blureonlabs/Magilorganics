@@ -21,7 +21,7 @@ export const CURRENCY_CODE = 'INR';
 export const NAV_LINKS = [
   {label: 'Kudineers', to: '/collections/kudineers'},
   {label: 'Thailams', to: '/collections/thailams'},
-  {label: 'Chooranams', to: '/collections/chooranams'},
+  {label: 'Chooranams', to: '/collections/chooranam-powders'},
   {label: 'Shop by Category', to: '/collections'},
   {label: 'Shop by Concern', to: '/concerns'},
   {label: 'Village Life', to: '/blogs/village-life'},
@@ -30,10 +30,10 @@ export const NAV_LINKS = [
 export const FOOTER_CATEGORIES = [
   {label: 'Kudineers', to: '/collections/kudineers'},
   {label: 'Thailams', to: '/collections/thailams'},
-  {label: 'Chooranams', to: '/collections/chooranams'},
+  {label: 'Chooranams', to: '/collections/chooranam-powders'},
   {label: 'Tablets', to: '/collections/tablets'},
   {label: 'Herbal Juices', to: '/collections/herbal-juices'},
-  {label: 'Hair Care', to: '/collections/hair-care'},
+  {label: 'Cosmetics & Hair Care', to: '/collections/cosmetics-hair-care'},
   {label: 'Kits', to: '/collections/kits'},
 ] as const;
 
