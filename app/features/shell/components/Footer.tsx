@@ -61,8 +61,13 @@ export function Footer() {
           {/* Brand column */}
           <div className="magil-footer__brand-col">
             <div className="magil-footer__brand-logo">
-              <PeacockMark size={36} />
-              <span className="magil-footer__brand-name">{STORE_NAME}</span>
+              <img
+                src="/magil-logo.png"
+                alt={STORE_NAME}
+                width="140"
+                height="48"
+                style={{objectFit: 'contain'}}
+              />
             </div>
             <p className="magil-footer__brand-desc">{STORE_TAGLINE}</p>
             <p className="magil-footer__brand-tamil">

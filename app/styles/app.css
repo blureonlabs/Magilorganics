@@ -947,10 +947,12 @@ button.reset:hover:not(:has(> *)) {
   white-space: nowrap;
 }
 
-.magil-header__nav-link:hover,
+.magil-header__nav-link:hover {
+  color: var(--magil-red-deep);
+}
 .magil-header__nav-link.active {
   color: var(--magil-red-deep);
-  border-bottom-color: var(--magil-red);
+  font-weight: 700;
 }
 
 @media (max-width: 768px) {
