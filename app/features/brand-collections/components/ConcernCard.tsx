@@ -13,7 +13,6 @@ import type {ComponentType} from 'react';
 export interface ConcernData {
   id: string;
   name: string;
-  tamil: string;
   color: string;
   headline: string;
   body: string;
@@ -52,7 +51,6 @@ export function ConcernCard({concern, active, onClick}: ConcernCardProps) {
     >
       <Icon size={16} style={{color: concern.color, flexShrink: 0}} />
       <span className="concern-nav-card__name">{concern.name}</span>
-      <span className="tamil concern-nav-card__tamil">{concern.tamil}</span>
 
       <style dangerouslySetInnerHTML={{__html: concernCardStyles}} />
     </button>
@@ -84,11 +82,6 @@ const concernCardStyles = /* css */ `
   .concern-nav-card__name {
     flex-shrink: 0;
   }
-  .concern-nav-card__tamil {
-    font-size: 11px;
-    color: var(--magil-ink-soft);
-    margin-left: auto;
-  }
 
   /* Mobile: pill style for horizontal scroll */
   @media (max-width: 767px) {
@@ -107,12 +100,6 @@ const concernCardStyles = /* css */ `
       background: var(--magil-red-deep);
       color: var(--magil-cream);
       border-color: var(--magil-red-deep);
-    }
-    .concern-nav-card--active .concern-nav-card__tamil {
-      color: rgba(251, 246, 236, 0.7);
-    }
-    .concern-nav-card__tamil {
-      margin-left: 4px;
     }
   }
 `;

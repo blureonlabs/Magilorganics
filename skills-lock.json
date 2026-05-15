@@ -1,11 +1,47 @@
 {
   "version": 1,
   "skills": {
+    "churn-prevention": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/churn-prevention/SKILL.md",
+      "computedHash": "527c4740617d9eeea66e14c3f7b7ecede41d6b0520c252f413fdfd0b763a6c64"
+    },
+    "content-strategy": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/content-strategy/SKILL.md",
+      "computedHash": "13824c129ab70874c57d766c2d844f8dac7a0b366845f108a73527c9d094c4f6"
+    },
     "copywriting": {
       "source": "coreyhaines31/marketingskills",
       "sourceType": "github",
       "skillPath": "skills/copywriting/SKILL.md",
       "computedHash": "d3191c3ad90610e0cacecf638d927418852264fabbd6e81c045094dad7d96f11"
+    },
+    "cro": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/cro/SKILL.md",
+      "computedHash": "07f7a27c57e48f4b67230712f8efbc5bcc01611b35321b3c2c2e5279c9304bcd"
+    },
+    "marketing-psychology": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/marketing-psychology/SKILL.md",
+      "computedHash": "50d735eb0f5c36f379ed2200f21aeacc9b9ad85667b5d33ec6111857352a1340"
+    },
+    "popups": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/popups/SKILL.md",
+      "computedHash": "95c5cb45dcbb05362168255d97ee68d53a5916d8de779bd08f5f70c9b0cabd36"
+    },
+    "seo-audit": {
+      "source": "coreyhaines31/marketingskills",
+      "sourceType": "github",
+      "skillPath": "skills/seo-audit/SKILL.md",
+      "computedHash": "f2dc52130189068981f21e1c0bdc4471ac7cd9b08d8a1320604411aa0f950385"
     }
   }
 }

@@ -25,6 +25,13 @@ export const meta: Route.MetaFunction = ({data}) => {
     description:
       data?.product?.description ??
       'Shop authentic village foods and Siddha remedies from Magil Organics.',
+    media: data?.product?.featuredImage?.url ? {
+      type: 'image' as const,
+      url: data.product.featuredImage.url,
+      width: data.product.featuredImage.width,
+      height: data.product.featuredImage.height,
+      altText: data.product.featuredImage.altText || data.product.title,
+    } : undefined,
   });
 };
 

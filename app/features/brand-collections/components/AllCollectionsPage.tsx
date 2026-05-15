@@ -39,34 +39,14 @@ export function AllCollectionsPage({collections}: AllCollectionsPageProps) {
     <div>
       {/* Hero */}
       <section className="collections-hero">
-        <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none'}} aria-hidden="true">
-          <svg
-            className="collections-hero__motif"
-            viewBox="0 0 200 200"
-          >
-            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-              <g key={a} transform={`rotate(${a} 100 100)`}>
-                <ellipse cx="100" cy="40" rx="14" ry="48" fill="var(--magil-red-deep)" />
-                <ellipse cx="100" cy="25" rx="8" ry="14" fill="var(--magil-gold)" />
-                <circle cx="100" cy="25" r="4" fill="var(--magil-red-dark)" />
-              </g>
-            ))}
-            <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
-          </svg>
-        </div>
-
         <div className="collections-hero__inner">
           <div className="eyebrow">
-            All Categories &middot;{' '}
-            {'\u0B85\u0BA9\u0BC8\u0BA4\u0BCD\u0BA4\u0BC1 \u0BB5\u0B95\u0BC8\u0B95\u0BB3\u0BCD'}
+            All Categories
           </div>
           <h1 className="serif collections-hero__heading">
             Shop by{' '}
             <em className="collections-hero__accent">category</em>
           </h1>
-          <div className="tamil collections-hero__tamil">
-            {'\u0BB5\u0B95\u0BC8 \u0BB5\u0BBE\u0BB0\u0BBF\u0BAF\u0BBE\u0B95 \u00b7 \u0B87\u0BB0\u0BA3\u0BCD\u0B9F\u0BC1 \u0BAA\u0BBF\u0BB0\u0BBE\u0BA3\u0BCD\u0B9F\u0BC1\u0B95\u0BB3\u0BCD, \u0B92\u0BB0\u0BC7 \u0BB5\u0BC0\u0B9F\u0BC1'}
-          </div>
           <p className="collections-hero__body">
             Two brands under one roof:{' '}
             <strong style={{color: 'var(--magil-leaf)'}}>Village Pharma</strong>{' '}
@@ -156,19 +136,6 @@ export function AllCollectionsPage({collections}: AllCollectionsPageProps) {
 
             {/* Oils price tile */}
             <div className="collections-oils-tile">
-              <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none', borderRadius: 'inherit'}} aria-hidden="true">
-                <svg
-                  className="collections-oils-tile__motif"
-                  viewBox="0 0 200 200"
-                >
-                  {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-                    <g key={a} transform={`rotate(${a} 100 100)`}>
-                      <ellipse cx="100" cy="40" rx="14" ry="48" fill="var(--magil-gold)" />
-                    </g>
-                  ))}
-                  <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
-                </svg>
-              </div>
               <div style={{position: 'relative'}}>
                 <div className="eyebrow" style={{color: 'var(--magil-gold-light)'}}>
                   The 5 oils we press
@@ -219,17 +186,6 @@ const allCollectionsStyles = /* css */ `
     .collections-hero { padding: 60px 48px 40px; }
   }
 
-  .collections-hero__motif {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 15%;
-    max-width: 180px;
-    aspect-ratio: 1;
-    opacity: 0.03;
-    pointer-events: none;
-  }
-
   .collections-hero__inner {
     max-width: 1280px;
     margin: 0 auto;
@@ -247,12 +203,6 @@ const allCollectionsStyles = /* css */ `
   .collections-hero__accent {
     color: var(--magil-red-deep);
     font-weight: 600;
-  }
-
-  .collections-hero__tamil {
-    font-size: 22px;
-    color: var(--magil-red-deep);
-    font-weight: 500;
   }
 
   .collections-hero__body {
@@ -294,9 +244,6 @@ const allCollectionsStyles = /* css */ `
     }
     .collections-hero__stat-num {
       font-size: 28px;
-    }
-    .collections-hero__tamil {
-      font-size: 16px;
     }
     .collections-brand-section {
       padding: 40px 16px;
@@ -365,16 +312,6 @@ const allCollectionsStyles = /* css */ `
     position: relative;
     overflow: hidden;
     min-height: 200px;
-  }
-  .collections-oils-tile__motif {
-    position: absolute;
-    right: 5%;
-    bottom: 5%;
-    width: 15%;
-    max-width: 180px;
-    aspect-ratio: 1;
-    opacity: 0.03;
-    pointer-events: none;
   }
   .collections-oils-tile__heading {
     font-size: 26px;

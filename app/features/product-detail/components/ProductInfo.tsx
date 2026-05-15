@@ -130,25 +130,6 @@ export function ProductInfo({
         </span>
       </div>
 
-      {/* Rating (static display) */}
-      <div
-        style={{
-          marginTop: 14,
-          display: 'flex',
-          alignItems: 'center',
-          gap: 10,
-          fontSize: 13,
-        }}
-      >
-        <span style={{color: 'var(--magil-gold)'}}>
-          &#9733;&#9733;&#9733;&#9733;&#9733;
-        </span>
-        <span style={{fontWeight: 700}}>4.9</span>
-        <span style={{color: 'var(--magil-ink-soft)'}}>
-          &middot; Reviews
-        </span>
-      </div>
-
       {/* Price */}
       <div
         style={{

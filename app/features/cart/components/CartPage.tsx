@@ -43,43 +43,6 @@ export function CartPage({cart: originalCart}: CartPageProps) {
           overflow: 'hidden',
         }}
       >
-        {/* Decorative mandala */}
-        <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none'}} aria-hidden="true">
-          <svg
-            style={{
-              position: 'absolute',
-              top: '5%',
-              right: '5%',
-              width: '15%',
-              maxWidth: 180,
-              aspectRatio: '1',
-              opacity: 0.03,
-            }}
-            viewBox="0 0 200 200"
-          >
-            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-              <g key={a} transform={`rotate(${a} 100 100)`}>
-                <ellipse
-                  cx="100"
-                  cy="40"
-                  rx="14"
-                  ry="48"
-                  fill="var(--magil-red-deep)"
-                />
-                <ellipse
-                  cx="100"
-                  cy="25"
-                  rx="8"
-                  ry="14"
-                  fill="var(--magil-gold)"
-                />
-                <circle cx="100" cy="25" r="4" fill="var(--magil-red-dark)" />
-              </g>
-            ))}
-            <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
-          </svg>
-        </div>
-
         <div style={{maxWidth: 1280, margin: '0 auto', position: 'relative'}}>
           {/* Breadcrumb */}
           <div
@@ -132,16 +95,6 @@ export function CartPage({cart: originalCart}: CartPageProps) {
             </div>
           </div>
 
-          <div
-            className="tamil"
-            style={{
-              fontSize: 18,
-              color: 'var(--magil-red-deep)',
-              marginTop: 4,
-            }}
-          >
-            {'\u0B89\u0B99\u0BCD\u0B95\u0BB3\u0BCD \u0B95\u0BC2\u0B9F\u0BC8 \u00B7 \u0B95\u0BBF\u0BB0\u0BBE\u0BAE \u0BAE\u0BB0\u0BC1\u0BA8\u0BCD\u0BA4\u0BC1\u0B95\u0BB3\u0BC1\u0B9F\u0BA9\u0BCD'}
-          </div>
         </div>
       </section>
 

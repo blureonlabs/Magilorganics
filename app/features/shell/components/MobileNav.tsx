@@ -74,12 +74,6 @@ export function MobileNav({isOpen, onClose}: MobileNavProps) {
           </Link>
         </div>
 
-        {/* Tamil tagline at bottom */}
-        <div className="magil-mobile-nav__footer">
-          <p className="magil-mobile-nav__tamil">
-            கிராம உணவுகள் — பாரம்பரிய முறையில்
-          </p>
-        </div>
       </nav>
     </>
   );

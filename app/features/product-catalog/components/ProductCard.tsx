@@ -42,8 +42,6 @@ interface ProductCardProduct {
       selectedOptions: Array<{name: string; value: string}>;
     }>;
   };
-  /** Tamil name metafield — optional, from metafield query */
-  tamilName?: {value: string} | null;
 }
 
 interface ProductCardProps {
@@ -95,7 +93,6 @@ export function ProductCard({product, loading}: ProductCardProps) {
     priceRange,
     compareAtPriceRange,
     variants,
-    tamilName,
   } = product;
 
   const badge = getProductBadge(tags);
@@ -156,18 +153,6 @@ export function ProductCard({product, loading}: ProductCardProps) {
         {/* Details */}
         <div className="magil-product-card__details">
           <h3 className="magil-product-card__title serif-bold">{title}</h3>
-
-          {tamilName?.value && (
-            <div className="magil-product-card__tamil tamil">
-              {tamilName.value}
-            </div>
-          )}
-
-          {/* Rating stars (static) */}
-          <div className="magil-product-card__rating">
-            <span className="magil-product-card__stars">&#9733;&#9733;&#9733;&#9733;&#9733;</span>
-            <span className="magil-product-card__rating-text">4.8</span>
-          </div>
 
           {/* Price */}
           <div className="magil-product-card__price-row">
@@ -340,34 +325,6 @@ const productCardStyles = /* css */ `
     line-height: 1.25;
   }
 
-  .magil-product-card__tamil {
-    font-size: 13px;
-    color: var(--magil-red-deep);
-    margin-top: 2px;
-    font-weight: 500;
-  }
-
-  .magil-product-card__rating {
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    margin-top: 8px;
-    font-size: 14px;
-  }
-
-  .magil-product-card__stars {
-    color: #E8A317;
-    letter-spacing: 1px;
-    font-size: 14px;
-    text-shadow: 0 0 1px rgba(232, 163, 23, 0.3);
-  }
-
-  .magil-product-card__rating-text {
-    color: var(--magil-ink-soft);
-    font-weight: 700;
-    font-size: 13px;
-  }
-
   .magil-product-card__price-row {
     display: flex;
     align-items: baseline;
@@ -431,15 +388,6 @@ const productCardStyles = /* css */ `
     }
     .magil-product-card__price {
       font-size: 19px;
-    }
-    .magil-product-card__rating {
-      font-size: 13px;
-    }
-    .magil-product-card__stars {
-      font-size: 13px;
-    }
-    .magil-product-card__rating-text {
-      font-size: 12px;
     }
     .magil-product-card__cart-action {
       padding: 8px 12px 12px;

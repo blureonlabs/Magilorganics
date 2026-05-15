@@ -8,7 +8,6 @@ const CONCERNS: ConcernData[] = [
   {
     id: 'immunity',
     name: 'Immunity',
-    tamil: '\u0BA8\u0BCB\u0BAF\u0BCD \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BCD\u0BAA\u0BC1',
     color: '#C8102E',
     headline: "Build a body that doesn't fall sick.",
     body: 'Seasonal flu? Recovery week? Constant fatigue? These formulations work with your body\u2019s natural defenses \u2014 the way Siddha intended.',
@@ -18,7 +17,6 @@ const CONCERNS: ConcernData[] = [
   {
     id: 'diabetes',
     name: 'Diabetes Care',
-    tamil: '\u0BA8\u0BC0\u0BB0\u0BBF\u0BB4\u0BBF\u0BB5\u0BC1',
     color: '#A14828',
     headline: "Sugar that doesn't spike. Energy that doesn't crash.",
     body: 'Low-GI rice, bitter melon-infused formulations, and ancient Siddha herbs that help your body manage glucose \u2014 without sacrificing taste.',
@@ -28,7 +26,6 @@ const CONCERNS: ConcernData[] = [
   {
     id: 'hair-skin',
     name: 'Hair & Skin',
-    tamil: '\u0BAE\u0BC1\u0B9F\u0BBF & \u0BA4\u0BCB\u0BB2\u0BCD',
     color: '#8B0E20',
     headline: 'What grandmothers put in your hair, now in a bottle.',
     body: 'Onion. Hibiscus. Coconut. Karuveppilai. The oils that built a hundred generations of thick hair \u2014 pressed in granite ural, never adulterated.',
@@ -38,7 +35,6 @@ const CONCERNS: ConcernData[] = [
   {
     id: 'gut',
     name: 'Gut & Digestion',
-    tamil: '\u0B9A\u0BC6\u0BB0\u0BBF\u0BAE\u0BBE\u0BA9\u0BAE\u0BCD',
     color: '#B8732A',
     headline: 'A calm gut. A clear mind. A fuller life.',
     body: 'Triphala. Bottle gourd. Banana stem. Adamant creeper. The fiber and ferments your body forgot \u2014 quietly working in the background.',
@@ -48,7 +44,6 @@ const CONCERNS: ConcernData[] = [
   {
     id: 'lungs',
     name: 'Lungs & Breath',
-    tamil: '\u0BA8\u0BC1\u0BB0\u0BC8\u0BAF\u0BC0\u0BB0\u0BB2\u0BCD',
     color: '#2A5F3E',
     headline: 'Breathing room, in a pouch.',
     body: 'Kabasura. Adathodai. Karpooravalli. Tulasi. The respiratory herbs of Tamil tradition \u2014 for clear breath and steady stamina.',
@@ -58,7 +53,6 @@ const CONCERNS: ConcernData[] = [
   {
     id: 'joints',
     name: 'Joint & Pain',
-    tamil: '\u0BAE\u0BC2\u0B9F\u0BCD\u0B9F\u0BC1 \u0BB5\u0BB2\u0BBF',
     color: '#5C0815',
     headline: 'For the knees that built a family.',
     body: 'Pinda Thailam. Karpoorathi. Vatha Sura. Ulunthu. Warming oils and decoctions that ease swelling, restore strength, and let you climb stairs again.',
@@ -68,7 +62,6 @@ const CONCERNS: ConcernData[] = [
   {
     id: 'weight',
     name: 'Weight Care',
-    tamil: '\u0B8E\u0B9F\u0BC8 \u0B95\u0BC1\u0BB1\u0BC8\u0BAA\u0BCD\u0BAA\u0BC1',
     color: '#6E8E5C',
     headline: 'Not a diet. A re-introduction to your body.',
     body: 'Dr Slim. Avaram Senna. Bottle Gourd. Wheat Grass. Real metabolic support \u2014 no stimulants, no jitters, no rebound.',
@@ -78,7 +71,6 @@ const CONCERNS: ConcernData[] = [
   {
     id: 'mind',
     name: 'Mind & Memory',
-    tamil: '\u0BAE\u0BA9\u0BAE\u0BCD & \u0B9E\u0BBE\u0BAA\u0B95\u0BAE\u0BCD',
     color: '#E8A317',
     headline: 'A quieter mind. A sharper memory.',
     body: 'Dr Brain. Ashwagandha. Brahmi. Sankhupushpam. For the student, the founder, the grandparent \u2014 anyone whose mind asks for more.',
@@ -98,25 +90,11 @@ export function ConcernsPage({products}: ConcernsPageProps) {
     <div>
       {/* Hero */}
       <section className="concerns-hero">
-        <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none'}} aria-hidden="true">
-          <svg className="concerns-hero__motif" viewBox="0 0 200 200">
-            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-              <g key={a} transform={`rotate(${a} 100 100)`}>
-                <ellipse cx="100" cy="40" rx="14" ry="48" fill="var(--magil-red-deep)" />
-                <ellipse cx="100" cy="25" rx="8" ry="14" fill="var(--magil-gold)" />
-                <circle cx="100" cy="25" r="4" fill="var(--magil-red-dark)" />
-              </g>
-            ))}
-            <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
-          </svg>
-        </div>
-
         <div className="concerns-hero__inner">
           <div className="concerns-hero__grid">
             <div>
               <div className="eyebrow">
-                Shop by Concern &middot;{' '}
-                {'\u0B86\u0BB0\u0BCB\u0B95\u0BCD\u0B95\u0BBF\u0BAF\u0BAE\u0BCD \u0BA4\u0BC7\u0B9F\u0BBF'}
+                Shop by Concern
               </div>
               <h1 className="serif concerns-hero__heading">
                 What is your body{' '}
@@ -168,22 +146,9 @@ export function ConcernsPage({products}: ConcernsPageProps) {
       {/* Vaidyar CTA */}
       <section className="vaidyar-cta-section">
         <div className="vaidyar-cta">
-          <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none'}} aria-hidden="true">
-            <svg className="vaidyar-cta__motif" viewBox="0 0 200 200">
-              {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-                <g key={a} transform={`rotate(${a} 100 100)`}>
-                  <ellipse cx="100" cy="40" rx="14" ry="48" fill="var(--magil-red-deep)" />
-                  <ellipse cx="100" cy="25" rx="8" ry="14" fill="var(--magil-red-dark)" />
-                  <circle cx="100" cy="25" r="4" fill="var(--magil-red-dark)" />
-                </g>
-              ))}
-              <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
-            </svg>
-          </div>
           <div className="vaidyar-cta__content">
             <div className="eyebrow">
-              Personalized guidance &middot;{' '}
-              {'\u0B86\u0BB2\u0BCB\u0B9A\u0BA9\u0BC8'}
+              Personalized guidance
             </div>
             <h2 className="serif vaidyar-cta__heading">
               Talk to a real <em className="vaidyar-cta__accent">vaidyar</em>.
@@ -252,12 +217,6 @@ function ConcernSection({
               <div>
                 <div className="eyebrow" style={{color: concern.color}}>
                   {concern.name}
-                </div>
-                <div
-                  className="tamil"
-                  style={{fontSize: 18, color: concern.color, fontWeight: 500, marginTop: 2}}
-                >
-                  {concern.tamil}
                 </div>
               </div>
             </div>
@@ -340,16 +299,6 @@ const concernsStyles = /* css */ `
   }
   @media (min-width: 768px) {
     .concerns-hero { padding: 60px 48px 50px; }
-  }
-  .concerns-hero__motif {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 15%;
-    max-width: 180px;
-    aspect-ratio: 1;
-    opacity: 0.03;
-    pointer-events: none;
   }
   .concerns-hero__inner {
     max-width: 1440px;
@@ -589,16 +538,6 @@ const concernsStyles = /* css */ `
   }
   @media (min-width: 768px) {
     .vaidyar-cta { padding: 70px 80px; }
-  }
-  .vaidyar-cta__motif {
-    position: absolute;
-    bottom: 5%;
-    right: 5%;
-    width: 15%;
-    max-width: 320px;
-    aspect-ratio: 1;
-    opacity: 0.03;
-    pointer-events: none;
   }
   .vaidyar-cta__content {
     position: relative;

@@ -17,7 +17,6 @@ const BRAND_CONFIG = {
         shelf
       </>
     ),
-    tamil: '\u0B95\u0BBF\u0BB0\u0BBE\u0BAE \u0BAE\u0BB0\u0BC1\u0BA8\u0BCD\u0BA4\u0B95\u0BAE\u0BCD',
     statLabel: 'Siddha & Ayurvedic products',
     statNote: 'PARTNER BRAND \u00b7 PARAMATHI VELUR',
     bgGradient: 'linear-gradient(135deg, var(--magil-leaf) 0%, #1A3F2A 100%)',
@@ -31,7 +30,6 @@ const BRAND_CONFIG = {
         </em>
       </>
     ),
-    tamil: '\u0BAE\u0B95\u0BBF\u0BB2\u0BCD \u0B86\u0BB0\u0BCD\u0B95\u0BBE\u0BA9\u0BBF\u0B95\u0BCD\u0BB8\u0BCD',
     statLabel: 'Single-filtered oils, 3 sizes each',
     statNote: 'HOUSE BRAND \u00b7 OUR FAMILY MILL',
     bgGradient:
@@ -58,25 +56,10 @@ export function BrandSection({brand, productCount, blurb}: BrandSectionProps) {
         </div>
 
         <h2 className="serif brand-section__heading">{config.heading}</h2>
-        <div className="tamil brand-section__tamil">{config.tamil}</div>
         <p className="brand-section__blurb">{blurb}</p>
       </div>
 
       <div className="brand-section__stats" style={{background: config.bgGradient}}>
-        {/* Decorative motif */}
-        <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none', borderRadius: 'inherit'}} aria-hidden="true">
-          <svg
-            className="brand-section__stats-motif"
-            viewBox="0 0 200 200"
-          >
-            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-              <g key={a} transform={`rotate(${a} 100 100)`}>
-                <ellipse cx="100" cy="40" rx="14" ry="48" fill="var(--magil-gold)" />
-              </g>
-            ))}
-            <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
-          </svg>
-        </div>
         <div style={{position: 'relative'}}>
           <div className="serif-bold brand-section__stats-num">
             {productCount}+
@@ -138,13 +121,6 @@ const brandSectionStyles = /* css */ `
     letter-spacing: -0.02em;
   }
 
-  .brand-section__tamil {
-    font-size: 18px;
-    color: var(--magil-red-deep);
-    font-weight: 500;
-    margin-bottom: 14px;
-  }
-
   .brand-section__blurb {
     font-size: 16px;
     line-height: 1.65;
@@ -158,16 +134,6 @@ const brandSectionStyles = /* css */ `
     border-radius: 20px;
     position: relative;
     overflow: hidden;
-  }
-  .brand-section__stats-motif {
-    position: absolute;
-    right: 5%;
-    top: 5%;
-    width: 15%;
-    max-width: 180px;
-    aspect-ratio: 1;
-    opacity: 0.03;
-    pointer-events: none;
   }
   .brand-section__stats-num {
     font-size: 56px;

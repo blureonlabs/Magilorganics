@@ -2,27 +2,6 @@ export function FeatureStrip() {
   return (
     <section className="feature-strip-section">
       <div className="feature-strip">
-        {/* Decorative arcs */}
-        <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none'}} aria-hidden="true">
-          <svg
-            className="feature-strip__motif"
-            viewBox="0 0 200 200"
-          >
-            {[20, 40, 60, 80, 100].map((r) => (
-              <circle
-                key={r}
-                cx="100"
-                cy="100"
-                r={r}
-                stroke="var(--magil-gold)"
-                strokeWidth="0.4"
-                fill="none"
-                strokeDasharray="0.6 1.2"
-              />
-            ))}
-          </svg>
-        </div>
-
         <div className="feature-strip__content">
           <div className="eyebrow" style={{color: 'var(--magil-gold)'}}>
             The Magil Promise
@@ -83,17 +62,6 @@ const featureStripStyles = /* css */ `
   }
   @media (min-width: 768px) {
     .feature-strip { padding: 70px 80px; }
-  }
-
-  .feature-strip__motif {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 15%;
-    max-width: 180px;
-    aspect-ratio: 1;
-    opacity: 0.03;
-    pointer-events: none;
   }
 
   .feature-strip__content {

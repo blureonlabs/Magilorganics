@@ -14,28 +14,24 @@ const TRENDING = [
 const CONCERN_CARDS = [
   {
     name: 'Diabetes',
-    tamil: '\u0BA8\u0BC0\u0BB0\u0BBF\u0BB4\u0BBF\u0BB5\u0BC1',
     color: '#A14828',
     bg: '#F5EBD7',
     Icon: DropletIcon,
   },
   {
     name: 'Hair Care',
-    tamil: '\u0BAE\u0BC1\u0B9F\u0BBF \u0BAA\u0BB0\u0BBE\u0BAE\u0BB0\u0BBF\u0BAA\u0BCD\u0BAA\u0BC1',
     color: '#8B0E20',
     bg: '#F5DCD0',
     Icon: LotusIcon,
   },
   {
     name: 'Immunity',
-    tamil: '\u0BA8\u0BCB\u0BAF\u0BCD \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BCD\u0BAA\u0BC1',
     color: '#C8102E',
     bg: '#FBE6A7',
     Icon: ShieldIcon,
   },
   {
     name: 'Weight Loss',
-    tamil: '\u0B8E\u0B9F\u0BC8 \u0B95\u0BC1\u0BB1\u0BC8\u0BAA\u0BCD\u0BAA\u0BC1',
     color: '#6E8E5C',
     bg: '#DFE9D5',
     Icon: ScaleIcon,
@@ -89,12 +85,6 @@ export function TrendingPanel() {
                 <div>
                   <div className="serif-bold trending-panel__concern-name">
                     {c.name}
-                  </div>
-                  <div
-                    className="tamil trending-panel__concern-tamil"
-                    style={{color: c.color}}
-                  >
-                    {c.tamil}
                   </div>
                 </div>
               </Link>
@@ -197,9 +187,5 @@ const trendingStyles = /* css */ `
   .trending-panel__concern-name {
     font-size: 17px;
     color: var(--magil-ink);
-  }
-  .trending-panel__concern-tamil {
-    font-size: 12px;
-    font-weight: 500;
   }
 `;

@@ -13,56 +13,48 @@ import {
 const CONCERNS = [
   {
     name: 'Diabetes Care',
-    tamil: '\u0BA8\u0BC0\u0BB0\u0BBF\u0BB4\u0BBF\u0BB5\u0BC1',
     color: '#A14828',
     Icon: DropletIcon,
     count: 8,
   },
   {
     name: 'Gut & Digestion',
-    tamil: '\u0B9A\u0BC6\u0BB0\u0BBF\u0BAE\u0BBE\u0BA9\u0BAE\u0BCD',
     color: '#B8732A',
     Icon: WheatIcon,
     count: 12,
   },
   {
     name: 'Immunity',
-    tamil: '\u0BA8\u0BCB\u0BAF\u0BCD \u0B8E\u0BA4\u0BBF\u0BB0\u0BCD\u0BAA\u0BCD\u0BAA\u0BC1',
     color: '#C8102E',
     Icon: ShieldIcon,
     count: 14,
   },
   {
     name: 'Hair & Skin',
-    tamil: '\u0BAE\u0BC1\u0B9F\u0BBF & \u0BA4\u0BCB\u0BB2\u0BCD',
     color: '#8B0E20',
     Icon: LotusIcon,
     count: 11,
   },
   {
     name: 'Joint & Pain',
-    tamil: '\u0BAE\u0BC2\u0B9F\u0BCD\u0B9F\u0BC1 \u0BB5\u0BB2\u0BBF',
     color: '#5C0815',
     Icon: BoneIcon,
     count: 9,
   },
   {
     name: 'Lungs & Breath',
-    tamil: '\u0BA8\u0BC1\u0BB0\u0BC8\u0BAF\u0BC0\u0BB0\u0BB2\u0BCD',
     color: '#2A5F3E',
     Icon: WindIcon,
     count: 7,
   },
   {
     name: 'Weight Care',
-    tamil: '\u0B8E\u0B9F\u0BC8 \u0B95\u0BC1\u0BB1\u0BC8\u0BAA\u0BCD\u0BAA\u0BC1',
     color: '#6E8E5C',
     Icon: ScaleIcon,
     count: 6,
   },
   {
     name: 'Mind & Memory',
-    tamil: '\u0BAE\u0BA9\u0BAE\u0BCD & \u0B9E\u0BBE\u0BAA\u0B95\u0BAE\u0BCD',
     color: '#E8A317',
     Icon: BrainIcon,
     count: 5,
@@ -75,8 +67,7 @@ export function ShopByConcern() {
       <div className="shop-concern__inner">
         <div className="shop-concern__header">
           <div className="eyebrow">
-            Shop by Concern &middot;{' '}
-            {'\u0B86\u0BB0\u0BCB\u0B95\u0BCD\u0B95\u0BBF\u0BAF\u0BAE\u0BCD \u0BA4\u0BC7\u0B9F\u0BBF'}
+            Shop by Concern
           </div>
           <h2 className="serif shop-concern__heading">
             What is your body{' '}
@@ -107,12 +98,6 @@ export function ShopByConcern() {
                 <c.Icon size={26} style={{color: '#fff'}} />
               </div>
               <h3 className="serif-bold shop-concern__card-name">{c.name}</h3>
-              <div
-                className="tamil shop-concern__card-tamil"
-                style={{color: c.color}}
-              >
-                {c.tamil}
-              </div>
               <div className="shop-concern__card-footer">
                 <span>{c.count} remedies</span>
                 <span style={{color: c.color, fontWeight: 600}}>
@@ -221,12 +206,6 @@ const shopConcernStyles = /* css */ `
   @media (max-width: 767px) {
     .shop-concern__card-name { font-size: 16px; }
   }
-  .shop-concern__card-tamil {
-    font-size: 13px;
-    margin-top: 2px;
-    font-weight: 500;
-  }
-
   .shop-concern__card-footer {
     margin-top: 18px;
     display: flex;

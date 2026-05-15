@@ -1094,13 +1094,6 @@ button.reset:hover:not(:has(> *)) {
   border-top: 1px solid var(--magil-line);
 }
 
-.magil-mobile-nav__tamil {
-  font-family: var(--font-tamil);
-  font-size: 14px;
-  color: var(--magil-ink-soft);
-  margin: 0;
-}
-
 /*
 * --------------------------------------------------
 * features/shell — Main content area
@@ -1301,14 +1294,6 @@ button.reset:hover:not(:has(> *)) {
   line-height: 1.7;
   color: rgba(251, 246, 236, 0.7);
   margin: 0 0 8px;
-}
-
-.magil-footer__brand-tamil {
-  font-family: var(--font-tamil);
-  font-size: 13px;
-  color: var(--magil-gold);
-  opacity: 0.8;
-  margin: 0;
 }
 
 /* Footer columns */

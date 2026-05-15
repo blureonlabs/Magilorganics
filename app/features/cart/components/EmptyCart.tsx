@@ -61,17 +61,6 @@ export function EmptyCart() {
         </h1>
 
         <p
-          className="tamil"
-          style={{
-            fontSize: 18,
-            color: 'var(--magil-red-deep)',
-            marginBottom: 8,
-          }}
-        >
-          {'\u0B89\u0B99\u0BCD\u0B95\u0BB3\u0BCD \u0B95\u0BC2\u0B9F\u0BC8 \u0B95\u0BBE\u0BB2\u0BBF\u0BAF\u0BBE\u0B95 \u0B89\u0BB3\u0BCD\u0BB3\u0BA4\u0BC1'}
-        </p>
-
-        <p
           style={{
             fontSize: 17,
             color: 'var(--magil-ink-soft)',

@@ -14,37 +14,6 @@ export function CollectionHero({
   return (
     <>
       <section className="magil-collection-hero">
-        {/* Decorative peacock backdrop */}
-        <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none'}} aria-hidden="true">
-          <svg
-            className="magil-collection-hero__peacock"
-            viewBox="0 0 200 200"
-          >
-            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map(
-              (a) => (
-                <g key={a} transform={`rotate(${a} 100 100)`}>
-                  <ellipse
-                    cx="100"
-                    cy="40"
-                    rx="14"
-                    ry="48"
-                    fill="var(--magil-red-deep)"
-                  />
-                  <ellipse
-                    cx="100"
-                    cy="25"
-                    rx="8"
-                    ry="14"
-                    fill="var(--magil-gold)"
-                  />
-                  <circle cx="100" cy="25" r="4" fill="var(--magil-red-dark)" />
-                </g>
-              ),
-            )}
-            <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
-          </svg>
-        </div>
-
         <div className="magil-collection-hero__inner">
           {/* Breadcrumb */}
           <nav className="magil-collection-hero__breadcrumb" aria-label="Breadcrumb">
@@ -87,17 +56,6 @@ const collectionHeroStyles = /* css */ `
     padding: 32px 16px 28px;
     position: relative;
     overflow: hidden;
-  }
-
-  .magil-collection-hero__peacock {
-    position: absolute;
-    top: 5%;
-    right: 5%;
-    width: 15%;
-    max-width: 180px;
-    aspect-ratio: 1;
-    opacity: 0.03;
-    pointer-events: none;
   }
 
   .magil-collection-hero__inner {
@@ -169,10 +127,6 @@ const collectionHeroStyles = /* css */ `
       font-size: 15px;
     }
 
-    .magil-collection-hero__peacock {
-      width: 15%;
-      max-width: 180px;
-    }
   }
 
   @media (max-width: 767px) {

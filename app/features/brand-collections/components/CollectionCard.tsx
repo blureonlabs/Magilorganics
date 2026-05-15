@@ -22,9 +22,6 @@ export function CollectionCard({collection, productCount}: CollectionCardProps) 
           {count} products
         </div>
         <h3 className="serif-bold collection-card__name">{c.name}</h3>
-        <div className="tamil collection-card__tamil" style={{color: c.color}}>
-          {c.tamil}
-        </div>
         <p className="collection-card__blurb">{c.blurb}</p>
         <div className="collection-card__link" style={{color: c.color}}>
           Shop the {c.name.toLowerCase()} <span>&rarr;</span>
@@ -83,11 +80,6 @@ const collectionCardStyles = /* css */ `
   }
   @media (max-width: 640px) {
     .collection-card__name { font-size: 20px; }
-  }
-
-  .collection-card__tamil {
-    font-size: 16px;
-    font-weight: 500;
   }
 
   .collection-card__blurb {

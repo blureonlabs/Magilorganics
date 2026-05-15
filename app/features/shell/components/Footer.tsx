@@ -70,9 +70,6 @@ export function Footer() {
               />
             </div>
             <p className="magil-footer__brand-desc">{STORE_TAGLINE}</p>
-            <p className="magil-footer__brand-tamil">
-              கிராம உணவுகள் — பாரம்பரிய முறையில்
-            </p>
           </div>
 
           {/* Categories */}

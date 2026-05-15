@@ -3,42 +3,36 @@ import {Link} from 'react-router';
 const CATEGORIES = [
   {
     name: 'Kudineers',
-    tamil: '\u0B95\u0BC1\u0B9F\u0BBF\u0BA8\u0BC0\u0BB0\u0BCD',
     icon: 'kudineer',
     href: '/collections/kudineers',
     count: '12 brews',
   },
   {
     name: 'Thailams',
-    tamil: '\u0BA4\u0BC8\u0BB2\u0BAE\u0BCD',
     icon: 'thailam',
     href: '/collections/thailams',
     count: '10 oils',
   },
   {
     name: 'Chooranams',
-    tamil: '\u0B9A\u0BC2\u0BB0\u0BA3\u0BAE\u0BCD',
     icon: 'chooranam',
     href: '/collections/chooranam-powders',
     count: '14 powders',
   },
   {
     name: 'Tablets',
-    tamil: '\u0BAE\u0BBE\u0BA4\u0BCD\u0BA4\u0BBF\u0BB0\u0BC8',
     icon: 'tablet',
     href: '/collections/tablets',
     count: '7 herbals',
   },
   {
     name: 'Herbal Juices',
-    tamil: '\u0B9A\u0BBE\u0BB1\u0BC1\u0B95\u0BB3\u0BCD',
     icon: 'juice',
     href: '/collections/herbal-juices',
     count: '18 juices',
   },
   {
     name: 'Kits',
-    tamil: '\u0BA4\u0BCA\u0B95\u0BC1\u0BAA\u0BCD\u0BAA\u0BC1',
     icon: 'kit',
     href: '/collections/kits',
     count: '5 sets',
@@ -135,7 +129,6 @@ export function CategoryRow() {
                 <CategoryIcon kind={c.icon} />
               </div>
               <div className="serif-bold category-row__name">{c.name}</div>
-              <div className="tamil category-row__tamil">{c.tamil}</div>
               <div className="category-row__count">{c.count}</div>
             </Link>
           ))}
@@ -202,11 +195,6 @@ const categoryStyles = /* css */ `
   @media (max-width: 767px) {
     .category-row__name { font-size: 14px; }
   }
-  .category-row__tamil {
-    font-size: 13px;
-    color: var(--magil-red-deep);
-    margin-top: 1px;
-  }
   .category-row__count {
     font-size: 11px;
     color: var(--magil-ink-soft);
@@ -228,9 +216,6 @@ const categoryStyles = /* css */ `
     .category-row__circle svg {
       width: 32px;
       height: 32px;
-    }
-    .category-row__tamil {
-      font-size: 11px;
     }
   }
 `;

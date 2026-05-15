@@ -1,19 +1,16 @@
 const PROOFS = [
   {
     title: 'Glyphosate Free',
-    tamil: '\u0B87\u0BB0\u0B9A\u0BBE\u0BAF\u0BA9\u0BAE\u0BCD \u0B87\u0BB2\u0BCD\u0BB2\u0BC8',
     body: 'Independently lab-tested. We name the farms, name the batches, and never use the herbicide banned in 20+ countries.',
     stamp: 'GR',
   },
   {
     title: 'Siddha Certified',
-    tamil: '\u0B9A\u0BBF\u0BA4\u0BCD\u0BA4 \u0B9A\u0BBE\u0BA9\u0BCD\u0BB1\u0BB3\u0BBF\u0B95\u0BCD\u0B95\u0BAA\u0BCD\u0BAA\u0B9F\u0BCD\u0B9F\u0BA4\u0BC1',
     body: 'Every formula is reviewed by registered Siddha practitioners from Madurai. No shortcuts to the 3,000-year-old texts.',
     stamp: 'SI',
   },
   {
     title: 'FSSC 22000',
-    tamil: '\u0B89\u0BB2\u0B95\u0BA4\u0BCD \u0BA4\u0BB0 \u0BA8\u0BBF\u0BB2\u0BC8',
     body: 'World-class food-safety certification \u2014 our facility meets the same standards as international food brands.',
     stamp: 'F22',
   },
@@ -38,7 +35,6 @@ export function ProofSection() {
               <h3 className="serif-bold proof-section__card-title">
                 {p.title}
               </h3>
-              <div className="tamil proof-section__card-tamil">{p.tamil}</div>
               <p className="proof-section__card-body">{p.body}</p>
             </div>
           ))}
@@ -120,11 +116,6 @@ const proofStyles = /* css */ `
     font-size: 26px;
     margin: 0;
     color: var(--magil-ink);
-  }
-  .proof-section__card-tamil {
-    font-size: 14px;
-    color: var(--magil-red-deep);
-    margin-top: 4px;
   }
   .proof-section__card-body {
     margin-top: 18px;

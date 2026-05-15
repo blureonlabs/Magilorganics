@@ -1,5 +1,4 @@
 import {Link} from 'react-router';
-import {PeacockBackdrop} from '~/shared/motifs/PeacockBackdrop';
 import {PeacockMark} from '~/shared/motifs/PeacockMark';
 import {DoodleUnderline, DoodleArrow} from '~/shared/motifs/DoodleElements';
 import {LeafIcon} from '~/shared/icons';
@@ -7,8 +6,6 @@ import {LeafIcon} from '~/shared/icons';
 export function Hero() {
   return (
     <section className="home-hero">
-      <PeacockBackdrop />
-
       <div className="home-hero__grid">
         {/* Left — editorial copy */}
         <div className="home-hero__copy">
@@ -30,10 +27,6 @@ export function Hero() {
             brewed at home.
           </h1>
 
-          <div className="tamil home-hero__tamil">
-            பாரம்பரியத்தின் சுவை — கிராமத்திலிருந்து உங்கள் வீடு வரை
-          </div>
-
           <p className="home-hero__body">
             Kudineers steeped over woodfire. Thailams pressed in granite ural.
             Chooranams ground at sunrise. Every Magil jar carries the patience
@@ -43,7 +36,7 @@ export function Hero() {
 
           <div className="home-hero__cta">
             <Link to="/products/kabasura-kudineer" className="btn btn-vibrant-red">
-              Shop the Kabasura <DoodleArrow size={18} color="#fff" />
+              Shop Bestsellers <DoodleArrow width={18} color="#fff" />
             </Link>
             <Link to="/collections" className="btn btn-outline">
               Explore the catalog
@@ -88,9 +81,6 @@ export function Hero() {
             </div>
             <div className="serif-bold" style={{fontSize: 22, color: 'var(--magil-red-deep)', marginTop: 4}}>
               Kabasura
-            </div>
-            <div className="tamil" style={{fontSize: 14, color: 'var(--magil-ink-soft)'}}>
-              கபசுர குடிநீர்
             </div>
           </div>
 
@@ -158,7 +148,6 @@ function HeroPouch() {
       {/* Product name */}
       <text x="140" y="208" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="20" fontWeight="700" fill="#2B1810" letterSpacing="0.04em">KABASURA</text>
       <text x="140" y="226" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="14" fontWeight="600" fill="#5A3A2A" fontStyle="italic">Kudineer</text>
-      <text x="140" y="244" textAnchor="middle" fontFamily="Hind Madurai, sans-serif" fontSize="13" fontWeight="500" fill="#8B0E20">கபசுர குடிநீர்</text>
       {/* Sub info */}
       <text x="140" y="268" textAnchor="middle" fontFamily="Satoshi, sans-serif" fontSize="8" fontWeight="500" fill="#5A3A2A" letterSpacing="0.15em">15 SIDDHA HERBS · IMMUNITY</text>
       {/* Certification badge */}
@@ -228,17 +217,6 @@ const heroStyles = /* css */ `
     bottom: -10px;
     width: calc(100% + 16px);
     height: 12px;
-  }
-
-  .home-hero__tamil {
-    margin-top: 24px;
-    font-size: 22px;
-    color: var(--magil-red-deep);
-    font-weight: 500;
-    letter-spacing: 0.02em;
-  }
-  @media (max-width: 767px) {
-    .home-hero__tamil { font-size: 16px; }
   }
 
   .home-hero__body {
