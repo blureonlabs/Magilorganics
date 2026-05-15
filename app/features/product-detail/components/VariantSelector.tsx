@@ -23,14 +23,17 @@ export function ProductVariantSelector({productOptions}: VariantSelectorProps) {
               }}
             >
               {option.optionValues.map((value, idx) => {
-                const isActive = value.isActive;
-                const isAvailable = value.isAvailable;
+                const isActive = value.selected;
+                const isAvailable = value.available;
                 const variantPrice = value.variant?.price;
+                const variantUrl = value.isDifferentProduct
+                  ? `/products/${value.handle}?${value.variantUriQuery}`
+                  : `?${value.variantUriQuery}`;
 
                 return (
                   <Link
                     key={value.name}
-                    to={value.to}
+                    to={variantUrl}
                     preventScrollReset
                     prefetch="intent"
                     replace

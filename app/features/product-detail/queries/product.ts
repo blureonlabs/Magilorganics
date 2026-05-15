@@ -88,7 +88,11 @@ const PRODUCT_FRAGMENT = `#graphql
     ) {
       ...ProductVariant
     }
-    adjacentVariants(selectedOptions: $selectedOptions) {
+    adjacentVariants(
+      selectedOptions: $selectedOptions
+      ignoreUnknownOptions: true
+      caseInsensitiveMatch: true
+    ) {
       ...ProductVariant
     }
     seo {
