@@ -1,7 +1,7 @@
 import {Link} from 'react-router';
 import {PeacockBackdrop} from '~/shared/motifs/PeacockBackdrop';
 import {PeacockMark} from '~/shared/motifs/PeacockMark';
-import {LeafIcon} from '~/shared/icons';
+import {LeafIcon, ArrowRightIcon} from '~/shared/icons';
 
 export function Hero() {
   return (
@@ -13,7 +13,7 @@ export function Hero() {
         <div className="home-hero__copy">
           <div className="home-hero__badge">
             <PeacockMark size={32} />
-            <div className="eyebrow">Siddha Tradition &middot; Since the Cauvery</div>
+            <div className="eyebrow">Siddha Tradition · Since the Cauvery</div>
           </div>
 
           <h1 className="home-hero__heading">
@@ -25,7 +25,7 @@ export function Hero() {
                 <path
                   d="M2 8 Q 70 2, 140 6 T 278 8"
                   stroke="var(--magil-gold)"
-                  strokeWidth="2"
+                  strokeWidth="2.5"
                   fill="none"
                   strokeLinecap="round"
                 />
@@ -36,19 +36,19 @@ export function Hero() {
           </h1>
 
           <div className="tamil home-hero__tamil">
-            {'\u0BAA\u0BBE\u0BB0\u0BAE\u0BCD\u0BAA\u0BB0\u0BBF\u0BAF\u0BA4\u0BCD\u0BA4\u0BBF\u0BA9\u0BCD \u0B9A\u0BC1\u0BB5\u0BC8 \u2014 \u0B95\u0BBF\u0BB0\u0BBE\u0BAE\u0BA4\u0BCD\u0BA4\u0BBF\u0BB2\u0BBF\u0BB0\u0BC1\u0BA8\u0BCD\u0BA4\u0BC1 \u0B89\u0B99\u0BCD\u0B95\u0BB3\u0BCD \u0BB5\u0BC0\u0B9F\u0BC1 \u0BB5\u0BB0\u0BC8'}
+            பாரம்பரியத்தின் சுவை — கிராமத்திலிருந்து உங்கள் வீடு வரை
           </div>
 
           <p className="home-hero__body">
             Kudineers steeped over woodfire. Thailams pressed in granite ural.
             Chooranams ground at sunrise. Every Magil jar carries the patience
-            of a Tamil grandmother &mdash; and the wisdom of 3,000-year-old
+            of a Tamil grandmother — and the wisdom of 3,000-year-old
             Siddha medicine.
           </p>
 
           <div className="home-hero__cta">
             <Link to="/products/kabasura-kudineer" className="btn btn-primary">
-              Shop the Kabasura
+              Shop the Kabasura <ArrowRightIcon size={16} />
             </Link>
             <Link to="/collections" className="btn btn-outline">
               Explore the catalog
@@ -60,7 +60,7 @@ export function Hero() {
             {[
               {num: '60+', label: 'Heritage formulas'},
               {num: '12k+', label: 'Families served'},
-              {num: '4.9\u2605', label: 'Across 8,000 reviews'},
+              {num: '4.9★', label: 'Across 8,000 reviews'},
             ].map((s) => (
               <div key={s.label} className="home-hero__trust-item">
                 <div className="serif-bold home-hero__trust-num">{s.num}</div>
@@ -72,7 +72,19 @@ export function Hero() {
 
         {/* Right — hero product showcase */}
         <div className="home-hero__product">
+          {/* Decorative dotted ring */}
+          <svg className="home-hero__ring" viewBox="0 0 100 100">
+            <circle cx="50" cy="50" r="46" stroke="var(--magil-red-deep)" strokeWidth="0.2" fill="none" strokeDasharray="0.5 1"/>
+            <circle cx="50" cy="50" r="42" stroke="var(--magil-gold-light)" strokeWidth="0.15" fill="none" opacity="0.6"/>
+          </svg>
+
+          {/* Background disc */}
           <div className="home-hero__product-disc" />
+
+          {/* Product packshot — Kabasura pouch */}
+          <div className="home-hero__packshot">
+            <HeroPouch />
+          </div>
 
           {/* Floating tag - bestseller */}
           <div className="home-hero__floating-tag home-hero__floating-tag--top">
@@ -83,28 +95,84 @@ export function Hero() {
               Kabasura
             </div>
             <div className="tamil" style={{fontSize: 14, color: 'var(--magil-ink-soft)'}}>
-              {'\u0B95\u0BAA\u0B9A\u0BC1\u0BB0 \u0B95\u0BC1\u0B9F\u0BBF\u0BA8\u0BC0\u0BB0\u0BCD'}
+              கபசுர குடிநீர்
             </div>
           </div>
 
           {/* Floating ingredient tag */}
           <div className="home-hero__floating-tag home-hero__floating-tag--bottom-left">
-            <LeafIcon size={16} style={{color: 'var(--magil-leaf)'}} />
+            <LeafIcon size={16} />
             <span>15 Siddha herbs</span>
           </div>
 
           {/* Floating price tag */}
           <div className="home-hero__price-tag">
             <span style={{fontSize: 12, opacity: 0.8}}>From</span>
-            <span className="serif-bold" style={{fontSize: 28}}>
-              {'\u20B9240'}
-            </span>
+            <span className="serif-bold" style={{fontSize: 28}}>₹175</span>
           </div>
         </div>
       </div>
 
       <style dangerouslySetInnerHTML={{__html: heroStyles}} />
     </section>
+  );
+}
+
+function HeroPouch() {
+  return (
+    <svg width="280" height="360" viewBox="0 0 280 360" aria-hidden="true" style={{
+      filter: 'drop-shadow(0 20px 40px rgba(0,0,0,0.3))',
+    }}>
+      <defs>
+        <linearGradient id="hero-pouch" x1="0" x2="0" y1="0" y2="1">
+          <stop offset="0" stopColor="#3A1A12"/>
+          <stop offset="0.5" stopColor="#1F0808"/>
+          <stop offset="1" stopColor="#0D0303"/>
+        </linearGradient>
+        <linearGradient id="hero-shine" x1="0" x2="1" y1="0" y2="0">
+          <stop offset="0" stopColor="rgba(255,255,255,0)"/>
+          <stop offset="0.3" stopColor="rgba(255,255,255,0.18)"/>
+          <stop offset="0.5" stopColor="rgba(255,255,255,0)"/>
+          <stop offset="0.7" stopColor="rgba(255,255,255,0.08)"/>
+          <stop offset="1" stopColor="rgba(255,255,255,0)"/>
+        </linearGradient>
+      </defs>
+      {/* Pouch body */}
+      <path d="M40 24 Q 40 8, 60 8 H 220 Q 240 8, 240 24 V 332 Q 240 350, 220 350 H 60 Q 40 350, 40 332 Z"
+        fill="url(#hero-pouch)"/>
+      {/* Top seal */}
+      <path d="M40 24 Q 40 8, 60 8 H 220 Q 240 8, 240 24 V 50 H 40 Z" fill="rgba(0,0,0,0.4)"/>
+      {/* Shine */}
+      <path d="M40 24 Q 40 8, 60 8 H 220 Q 240 8, 240 24 V 332 Q 240 350, 220 350 H 60 Q 40 350, 40 332 Z"
+        fill="url(#hero-shine)"/>
+      {/* Label */}
+      <rect x="60" y="80" width="160" height="220" rx="6" fill="#FBF6EC"/>
+      {/* Peacock motif */}
+      <g transform="translate(140 110)">
+        <ellipse cx="0" cy="0" rx="4" ry="10" fill="#C8102E"/>
+        <ellipse cx="-6" cy="-2" rx="3" ry="8" fill="#E8A317" transform="rotate(-20)"/>
+        <ellipse cx="6" cy="-2" rx="3" ry="8" fill="#E8A317" transform="rotate(20)"/>
+        <circle cx="0" cy="-6" r="3" fill="#8B0E20"/>
+      </g>
+      {/* Brand text */}
+      <text x="140" y="148" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="22" fontWeight="700" fill="#8B0E20" letterSpacing="0.04em">MAGIL</text>
+      <text x="140" y="166" textAnchor="middle" fontFamily="Satoshi, sans-serif" fontSize="9" fontWeight="600" fill="#2B1810" letterSpacing="0.2em">VILLAGE FOODS</text>
+      {/* Divider */}
+      <line x1="80" y1="180" x2="200" y2="180" stroke="#E8A317" strokeWidth="1"/>
+      <circle cx="140" cy="180" r="2.5" fill="#E8A317"/>
+      {/* Product name */}
+      <text x="140" y="208" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="20" fontWeight="700" fill="#2B1810" letterSpacing="0.04em">KABASURA</text>
+      <text x="140" y="226" textAnchor="middle" fontFamily="Cormorant Garamond, serif" fontSize="14" fontWeight="600" fill="#5A3A2A" fontStyle="italic">Kudineer</text>
+      <text x="140" y="244" textAnchor="middle" fontFamily="Hind Madurai, sans-serif" fontSize="13" fontWeight="500" fill="#8B0E20">கபசுர குடிநீர்</text>
+      {/* Sub info */}
+      <text x="140" y="268" textAnchor="middle" fontFamily="Satoshi, sans-serif" fontSize="8" fontWeight="500" fill="#5A3A2A" letterSpacing="0.15em">15 SIDDHA HERBS · IMMUNITY</text>
+      {/* Certification badge */}
+      <circle cx="140" cy="290" r="14" fill="#E8A317"/>
+      <text x="140" y="287" textAnchor="middle" fontFamily="Satoshi, sans-serif" fontSize="6" fontWeight="700" fill="#2B1810">SIDDHA</text>
+      <text x="140" y="295" textAnchor="middle" fontFamily="Satoshi, sans-serif" fontSize="6" fontWeight="700" fill="#2B1810">CERTIFIED</text>
+      {/* Weight */}
+      <text x="140" y="320" textAnchor="middle" fontFamily="Satoshi, sans-serif" fontSize="9" fontWeight="700" fill="#5A3A2A" letterSpacing="0.1em">NET 100 g</text>
+    </svg>
   );
 }
 
@@ -174,6 +242,9 @@ const heroStyles = /* css */ `
     font-weight: 500;
     letter-spacing: 0.02em;
   }
+  @media (max-width: 768px) {
+    .home-hero__tamil { font-size: 16px; }
+  }
 
   .home-hero__body {
     max-width: 480px;
@@ -189,6 +260,7 @@ const heroStyles = /* css */ `
     margin-top: 36px;
     flex-wrap: wrap;
   }
+  .home-hero__cta .btn { display: inline-flex; align-items: center; gap: 8px; }
 
   .home-hero__trust {
     margin-top: 50px;
@@ -222,12 +294,29 @@ const heroStyles = /* css */ `
     .home-hero__product { display: block; }
   }
 
+  .home-hero__ring {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
   .home-hero__product-disc {
     position: absolute;
     inset: 5% 5% 8%;
     background: radial-gradient(circle at 40% 30%, var(--magil-gold-light) 0%, var(--magil-gold) 50%, var(--magil-clay) 100%);
     border-radius: 50%;
     box-shadow: 0 30px 80px rgba(184,115,42,0.35), inset 0 -20px 60px rgba(139,14,32,0.25);
+  }
+
+  .home-hero__packshot {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
   }
 
   .home-hero__floating-tag {
