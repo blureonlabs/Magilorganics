@@ -44,7 +44,12 @@ export function links() {
     },
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700&family=DM+Sans:wght@400;500;600;700&family=Hind+Madurai:wght@400;500;600;700&display=swap',
+      href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700&family=Hind+Madurai:wght@400;500;600;700&display=swap',
+    },
+    {rel: 'preconnect', href: 'https://api.fontshare.com'},
+    {
+      rel: 'stylesheet',
+      href: 'https://api.fontshare.com/v2/css?f[]=satoshi@300,400,500,600,700,900&display=swap',
     },
     {rel: 'icon', type: 'image/svg+xml', href: favicon},
   ];
