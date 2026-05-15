@@ -2,33 +2,33 @@ import {PlayIcon} from '~/shared/icons';
 
 const REELS = [
   {
-    title: 'Kabasura, brewed at dawn',
-    subtitle: 'Watch 15 herbs come together',
+    title: '15 herbs, one clay pot',
+    subtitle: 'How Kabasura is brewed at dawn',
     bg: '#5C0815',
   },
   {
-    title: "Onion oil \u2014 Selvi Amma's way",
-    subtitle: 'From the kitchen of Chettinad',
+    title: 'Selvi Amma\u2019s onion oil secret',
+    subtitle: 'A Chettinad kitchen, unchanged for decades',
     bg: '#8B0E20',
   },
   {
-    title: 'Sun-drying Vatha herbs',
-    subtitle: 'Three days. No shortcuts.',
+    title: '72 hours under the sun',
+    subtitle: 'Why we sun-dry Vatha herbs the slow way',
     bg: '#A14828',
   },
   {
-    title: 'Inside the granite ural',
-    subtitle: 'How Thailam is really pressed',
+    title: 'Stone-pressed, not machine-made',
+    subtitle: 'Inside our granite ural for Thailam',
     bg: '#5A3A2A',
   },
   {
-    title: 'Meet Ramu, our amla farmer',
-    subtitle: 'Four generations in Salem',
+    title: 'Ramu picks amla at 5 AM',
+    subtitle: 'Four generations of farming in Salem',
     bg: '#2A5F3E',
   },
   {
-    title: 'Triphala from sacred trees',
-    subtitle: 'Why fruit choice matters',
+    title: 'Sacred trees, sacred fruit',
+    subtitle: 'How we source Triphala the right way',
     bg: '#B8732A',
   },
 ];
@@ -38,11 +38,11 @@ export function VillageStories() {
     <section className="village-stories">
       <div className="village-stories__inner">
         <div className="village-stories__header">
-          <div className="eyebrow">Stories from the village</div>
+          <div className="eyebrow">From the village floor</div>
           <h2 className="serif village-stories__heading">
-            It takes a{' '}
-            <em className="village-stories__accent">village</em> to make good
-            medicine.
+            See how your{' '}
+            <em className="village-stories__accent">medicine</em> is really
+            made.
           </h2>
         </div>
 

@@ -22,24 +22,24 @@ export function NoResults({term}: NoResultsProps) {
         <div className="no-results__icon-wrap">
           <LampIcon size={44} style={{color: 'var(--magil-gold)'}} />
         </div>
-        <div className="eyebrow">Nothing found</div>
+        <div className="eyebrow">No matches</div>
         <h2 className="serif no-results__heading">
-          We don&rsquo;t have{' '}
+          We couldn&rsquo;t find{' '}
           <em className="no-results__term">&ldquo;{term}&rdquo;</em> &mdash;
-          yet.
+          but we can help.
         </h2>
         <p className="no-results__body">
-          Try a more general term, or browse our most-loved remedies below. If
-          you&rsquo;re looking for something specific, our vaidyar would love to
-          hear from you.
+          Try a different spelling or browse by health concern below.
+          You can also WhatsApp our Siddha practitioner &mdash; they&rsquo;ll
+          point you to the right remedy.
         </p>
 
         <div className="no-results__actions">
           <Link to="/concerns" className="btn btn-primary">
-            Shop by concern
+            Browse by Concern
           </Link>
           <Link to="/collections" className="btn btn-outline">
-            Browse all categories
+            Explore All Categories
           </Link>
         </div>
 

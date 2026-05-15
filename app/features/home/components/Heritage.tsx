@@ -9,10 +9,11 @@ export function Heritage() {
         <div className="heritage__quote-mark">&ldquo;</div>
 
         <p className="heritage__quote">
-          My grandmother brewed Kabasura on a clay stove behind her house in
-          Karaikudi. She didn&rsquo;t measure herbs &mdash; she{' '}
-          <em className="heritage__accent">knew</em> them. We built Magil to
-          bring that knowing into your home, untouched.
+          In our family, medicine was never bought &mdash; it was brewed.
+          My paatti would pick herbs before sunrise and boil them on a clay
+          stove in Karaikudi. She didn&rsquo;t need a recipe. She{' '}
+          <em className="heritage__accent">knew</em>. Magil exists to bring
+          that knowing to your kitchen, exactly as she made it.
         </p>
 
         <div className="feather-divider heritage__divider">

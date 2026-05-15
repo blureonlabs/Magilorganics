@@ -190,18 +190,18 @@ export function OrderSummary({cart}: OrderSummaryProps) {
         >
           <TrustItem
             icon={<CoinIcon size={18} />}
-            title="COD available"
-            subtitle="Pay at delivery"
+            title="COD accepted"
+            subtitle="Pay at your door"
           />
           <TrustItem
             icon={<LockIcon size={18} />}
-            title="100% secure"
-            subtitle="Razorpay / UPI"
+            title="Secure checkout"
+            subtitle="Razorpay / UPI / Cards"
           />
           <TrustItem
             icon={<TruckIcon size={18} />}
-            title="2-4 day shipping"
-            subtitle="All India"
+            title="Ships in 2-4 days"
+            subtitle="All India delivery"
           />
           <TrustItem
             icon={
@@ -220,8 +220,8 @@ export function OrderSummary({cart}: OrderSummaryProps) {
                 <path d="M3.51 15a9 9 0 1 0 2.13-9.36L1 10" />
               </svg>
             }
-            title="Easy returns"
-            subtitle="Within 7 days"
+            title="Hassle-free returns"
+            subtitle="7-day window"
           />
         </div>
       </div>

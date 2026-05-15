@@ -4,22 +4,22 @@ export function FeatureStrip() {
       <div className="feature-strip">
         <div className="feature-strip__content">
           <div className="eyebrow" style={{color: 'var(--magil-gold)'}}>
-            The Magil Promise
+            Why Magil
           </div>
           <h2 className="feature-strip__heading">
-            Real medicine.{' '}
-            <em className="feature-strip__accent">Real soil.</em>
+            We grow it.{' '}
+            <em className="feature-strip__accent">We make it.</em>
           </h2>
           <p className="feature-strip__body">
-            Siddha formulations from ancient texts. Ingredients from named
-            farmers. Quality your grandmother would approve of.
+            Every herb traced to a named farm. Every formula rooted in
+            3,000-year-old Siddha texts. Zero middlemen. Zero compromise.
           </p>
 
           <div className="feature-strip__stats">
             {[
-              ['Glyphosate-free', 'Lab-tested every batch'],
-              ['No outsourcing', 'Packed at our village'],
-              ['FSSC 22000', 'World-class hygiene'],
+              ['Glyphosate-Free', 'Every batch lab-tested'],
+              ['Village-Packed', 'Made and sealed in Paramathi Velur'],
+              ['FSSC 22000', 'International food-safety certified'],
             ].map(([h, s]) => (
               <div key={h} className="feature-strip__stat">
                 <div className="feature-strip__stat-heading">

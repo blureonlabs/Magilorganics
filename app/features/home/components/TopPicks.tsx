@@ -41,10 +41,10 @@ export function TopPicks({products}: TopPicksProps) {
       <div className="top-picks__inner">
         <div className="top-picks__header">
           <div>
-            <div className="eyebrow">Top Picks</div>
+            <div className="eyebrow">Bestsellers</div>
             <h2 className="serif top-picks__heading">
-              What our{' '}
-              <em className="top-picks__heading-accent">kudumbam</em> loves
+              Loved by 12,000+{' '}
+              <em className="top-picks__heading-accent">families</em>
             </h2>
           </div>
 

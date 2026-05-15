@@ -67,14 +67,15 @@ export function ShopByConcern() {
       <div className="shop-concern__inner">
         <div className="shop-concern__header">
           <div className="eyebrow">
-            Shop by Concern
+            What Bothers You?
           </div>
           <h2 className="shop-concern__heading">
-            Shop by Health Concern
+            Tell us your concern. We&rsquo;ll find your remedy.
           </h2>
           <p className="shop-concern__body">
-            Pick a concern. We&rsquo;ll guide you to the right Siddha
-            formulation &mdash; and the science behind it.
+            Every body is different. Pick what troubles you and
+            we&rsquo;ll match you with the right Siddha formulation
+            &mdash; backed by ancient texts and modern testing.
           </p>
         </div>
 

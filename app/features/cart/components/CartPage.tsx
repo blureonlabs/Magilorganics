@@ -83,7 +83,7 @@ export function CartPage({cart: originalCart}: CartPageProps) {
             >
               Your{' '}
               <em style={{color: 'var(--magil-red-deep)', fontWeight: 600}}>
-                kudukai
+                remedies
               </em>
             </h1>
             <div style={{fontSize: 16, color: 'var(--magil-ink-soft)'}}>

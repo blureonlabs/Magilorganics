@@ -1,10 +1,10 @@
 import {TruckIcon, GiftIcon, LeafIcon, StarIcon} from '~/shared/icons';
 
 const promos = [
-  {icon: <TruckIcon />, text: 'Free shipping on orders above Rs.999'},
-  {icon: <GiftIcon />, text: 'Festival offer: Rs.500 OFF above Rs.3000 - Code: MAGIL500'},
-  {icon: <LeafIcon />, text: 'New: Pro-Protein Multigrain Atta - 22g protein per serving'},
-  {icon: <StarIcon />, text: '100% organic, village-made Siddha products from Tamil Nadu'},
+  {icon: <TruckIcon />, text: 'Free delivery on orders above \u20B9999'},
+  {icon: <GiftIcon />, text: 'Flat \u20B9500 OFF above \u20B93,000 \u2014 Use code MAGIL500'},
+  {icon: <LeafIcon />, text: 'Every herb traced to a named farm in Tamil Nadu'},
+  {icon: <StarIcon />, text: 'Glyphosate-free. Lab-tested. Siddha-verified.'},
 ];
 
 export function PromoStrip() {

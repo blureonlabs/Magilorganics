@@ -14,9 +14,9 @@ export function Hero() {
           </div>
 
           <h1 className="home-hero__heading">
-            Cold-pressed oils &{' '}
+            Your body deserves{' '}
             <em className="home-hero__heading-accent">
-              herbal wellness
+              real medicine
               <span className="home-hero__underline">
                 <DoodleUnderline
                   width="100%"
@@ -25,29 +25,29 @@ export function Hero() {
                 />
               </span>
             </em>
-            {' '}from our village.
+            {' '}from real soil.
           </h1>
 
           <p className="home-hero__body">
-            Farm-sourced. Hand-prepared. Trusted by 12,000+ families.
-            Cold-pressed oils, Siddha herbal powders, thailams and
-            juices — made the traditional way in Paramathi Velur.
+            Siddha herbs from named farms. Cold-pressed oils from
+            village urals. Trusted by 12,000+ families across India.
+            No factories. No shortcuts. Just honest food from Paramathi Velur.
           </p>
 
           <div className="home-hero__cta">
             <Link to="/collections" className="btn btn-vibrant-red">
-              Shop All Products <DoodleArrow width={18} color="#fff" />
+              Explore Our Remedies <DoodleArrow width={18} color="#fff" />
             </Link>
             <Link to="/concerns" className="btn btn-outline">
-              Shop by Concern
+              Find Your Remedy
             </Link>
           </div>
 
           {/* Trust strip */}
           <div className="home-hero__trust">
             {[
-              {label: '60+ Products'},
-              {label: 'Farm-Sourced'},
+              {label: '60+ Herbal Products'},
+              {label: 'Glyphosate-Free'},
               {label: 'Free Shipping above ₹999'},
             ].map((item) => (
               <div key={item.label} className="home-hero__trust-item">

@@ -74,17 +74,17 @@ function BenefitIcon({kind}: {kind: string}) {
 }
 
 const BENEFITS = [
-  {icon: 'leaf', title: '15 Siddha Herbs', subtitle: 'Authentic ratio'},
-  {icon: 'shield', title: 'Immunity Boost', subtitle: 'Daily strength'},
-  {icon: 'lung', title: 'Respiratory', subtitle: 'Clears phlegm'},
-  {icon: 'fire', title: 'Anti-fever', subtitle: 'Cooling action'},
+  {icon: 'leaf', title: '15 Siddha Herbs', subtitle: 'Traditional ratio'},
+  {icon: 'shield', title: 'Daily Immunity', subtitle: 'Builds strength'},
+  {icon: 'lung', title: 'Breathe Easy', subtitle: 'Clears congestion'},
+  {icon: 'fire', title: 'Cooling Action', subtitle: 'Reduces fever'},
 ];
 
 const TRUST_ITEMS = [
-  {Icon: TruckIcon, line1: 'Free shipping', line2: 'above \u20B9999'},
-  {Icon: LockIcon, line1: 'Secure', line2: 'payments'},
-  {Icon: FarmerIcon, line1: 'Farmer', line2: 'empowerment'},
-  {Icon: CoinIcon, line1: 'COD', line2: 'available'},
+  {Icon: TruckIcon, line1: 'Free delivery', line2: 'above \u20B9999'},
+  {Icon: LockIcon, line1: '100% secure', line2: 'Razorpay / UPI'},
+  {Icon: FarmerIcon, line1: 'Farm-direct', line2: 'No middlemen'},
+  {Icon: CoinIcon, line1: 'COD accepted', line2: 'Pay at door'},
 ];
 
 export function ProductInfo({

@@ -29,11 +29,12 @@ function buildSections(descriptionHtml: string): AccordionSection[] {
     },
     {
       id: 'ingredients',
-      label: 'Ingredients',
+      label: 'What\u2019s Inside',
       content: (
         <p style={{fontSize: 15, lineHeight: 1.7, color: 'var(--magil-ink-soft)'}}>
-          See product packaging for the full list of ingredients. All herbs are
-          sourced from named farms across Tamil Nadu.
+          Every ingredient is sourced from named farms across Tamil Nadu. Check
+          the product packaging for the full herb list, origin, and batch number.
+          We believe you deserve to know exactly what goes into your body.
         </p>
       ),
     },
@@ -42,29 +43,32 @@ function buildSections(descriptionHtml: string): AccordionSection[] {
       label: 'How to Use',
       content: (
         <p style={{fontSize: 15, lineHeight: 1.7, color: 'var(--magil-ink-soft)'}}>
-          Please refer to the instructions on the product label for dosage and
-          preparation guidance.
+          Follow the dosage and preparation instructions on your product label.
+          For best results, take consistently at the same time each day. If
+          you have questions, our Siddha practitioners are happy to guide you
+          &mdash; reach us on WhatsApp.
         </p>
       ),
     },
     {
       id: 'benefits',
-      label: 'Benefits',
+      label: 'Key Benefits',
       content: (
         <p style={{fontSize: 15, lineHeight: 1.7, color: 'var(--magil-ink-soft)'}}>
-          Detailed benefits information is available on the product packaging and
-          our blog.
+          This product is formulated according to traditional Siddha texts.
+          Benefits vary by individual constitution and consistency of use.
+          Visit our blog for in-depth guides on how each herb works.
         </p>
       ),
     },
     {
       id: 'storage',
-      label: 'Storage',
+      label: 'Storage & Shelf Life',
       content: (
         <p style={{fontSize: 15, lineHeight: 1.7, color: 'var(--magil-ink-soft)'}}>
-          Store in a dry, cool place away from direct sunlight. Use a clean, dry
-          spoon to scoop. Keep the pouch sealed. Best consumed within 90 days of
-          opening.
+          Keep in a cool, dry spot away from sunlight. Always use a clean, dry
+          spoon. Seal the pouch tightly after each use. Best consumed within
+          90 days of opening for full potency.
         </p>
       ),
     },

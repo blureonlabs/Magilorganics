@@ -14,10 +14,10 @@ export function MostLoved({products}: MostLovedProps) {
       <div className="most-loved__inner">
         <div className="most-loved__header">
           <div>
-            <div className="eyebrow">Most Loved</div>
+            <div className="eyebrow">Amma-Approved</div>
             <h2 className="serif most-loved__heading">
-              The{' '}
-              <em className="most-loved__accent">amma-approved</em> picks.
+              Remedies your{' '}
+              <em className="most-loved__accent">family</em> will thank you for.
             </h2>
           </div>
           <Link to="/collections" className="btn btn-outline">

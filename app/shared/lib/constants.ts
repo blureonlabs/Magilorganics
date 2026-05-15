@@ -5,7 +5,7 @@
 export const FREE_SHIPPING_THRESHOLD = 999;
 export const STORE_NAME = 'Magil Organics';
 export const STORE_TAGLINE =
-  'Honest village foods, hand-prepared by farming families across Tamil Nadu.';
+  'Real Siddha remedies from real farms. Trusted by 12,000+ families.';
 export const STORE_PHONE = ['9442668521', '9003456677'];
 export const STORE_PHONE_PRIMARY = '+91 94426 68521';
 export const STORE_PHONE_SECONDARY = '+91 90034 56677';

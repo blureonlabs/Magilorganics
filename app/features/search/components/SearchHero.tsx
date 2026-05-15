@@ -10,8 +10,8 @@ export function SearchHero({term}: SearchHeroProps) {
     <section className="search-hero">
       <div className="search-hero__inner">
         <h1 className="search-hero__heading serif">
-          What are you{' '}
-          <em className="search-hero__accent">looking for</em>?
+          Find your{' '}
+          <em className="search-hero__accent">remedy</em>
         </h1>
 
         <Form method="get" action="/search" className="search-hero__form">

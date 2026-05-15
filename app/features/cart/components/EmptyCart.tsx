@@ -40,7 +40,7 @@ export function EmptyCart() {
         </div>
 
         <div className="eyebrow" style={{color: 'var(--magil-ink-soft)'}}>
-          Empty kudukai
+          Nothing here yet
         </div>
 
         <h1
@@ -53,9 +53,9 @@ export function EmptyCart() {
             color: 'var(--magil-ink)',
           }}
         >
-          Your basket is{' '}
+          Your wellness journey{' '}
           <em style={{color: 'var(--magil-red-deep)', fontWeight: 600}}>
-            waiting
+            starts here
           </em>
           .
         </h1>
@@ -68,8 +68,8 @@ export function EmptyCart() {
             marginBottom: 30,
           }}
         >
-          Begin with a Kudineer, a Thailam, or a cold-pressed oil — your
-          grandmother would approve of any of them.
+          A Kudineer for immunity. A Thailam for sore joints. A cold-pressed
+          oil for your kitchen. Pick what your body needs today.
         </p>
 
         <div
@@ -81,10 +81,10 @@ export function EmptyCart() {
           }}
         >
           <Link to="/collections" className="btn btn-primary">
-            Explore all remedies
+            Discover Remedies
           </Link>
-          <Link to="/collections" className="btn btn-outline">
-            Shop by category
+          <Link to="/concerns" className="btn btn-outline">
+            Shop by Concern
           </Link>
         </div>
       </div>

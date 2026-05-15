@@ -1,17 +1,17 @@
 const PROOFS = [
   {
-    title: 'Glyphosate Free',
-    body: 'Independently lab-tested. We name the farms, name the batches, and never use the herbicide banned in 20+ countries.',
+    title: 'Glyphosate-Free',
+    body: 'Every batch independently lab-tested. We name the farm, name the farmer, and publish the results. No banned herbicides, ever.',
     stamp: 'GR',
   },
   {
-    title: 'Siddha Certified',
-    body: 'Every formula is reviewed by registered Siddha practitioners from Madurai. No shortcuts to the 3,000-year-old texts.',
+    title: 'Siddha-Verified',
+    body: 'Registered Siddha practitioners from Madurai review every formula against 3,000-year-old texts. No modern shortcuts.',
     stamp: 'SI',
   },
   {
-    title: 'FSSC 22000',
-    body: 'World-class food-safety certification \u2014 our facility meets the same standards as international food brands.',
+    title: 'FSSC 22000 Certified',
+    body: 'Our village facility meets the same international food-safety standards as top global brands. Clean rooms, not just clean labels.',
     stamp: 'F22',
   },
 ];
@@ -21,10 +21,10 @@ export function ProofSection() {
     <section className="proof-section">
       <div className="proof-section__inner">
         <div className="proof-section__header">
-          <div className="eyebrow">Good food, backed by proof</div>
+          <div className="eyebrow">Proof, not promises</div>
           <h2 className="serif proof-section__heading">
-            We sell{' '}
-            <em className="proof-section__accent">medicine</em>, not marketing.
+            We test what we{' '}
+            <em className="proof-section__accent">sell</em>. You see the results.
           </h2>
         </div>
 
