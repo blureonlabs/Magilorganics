@@ -297,17 +297,17 @@ const productCardStyles = /* css */ `
   .magil-product-card__image-wrap {
     background: var(--magil-cream-warm);
     aspect-ratio: 1 / 1;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    position: relative;
     overflow: hidden;
   }
 
   .magil-product-card__image-wrap img {
+    position: absolute;
+    inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
-    border-radius: 0;
+    object-fit: contain;
+    padding: 12px;
   }
 
   .magil-product-card__image-placeholder {
