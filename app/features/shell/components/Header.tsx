@@ -170,6 +170,7 @@ export function Header({cart}: HeaderProps) {
               <SearchIcon />
             </button>
 
+            {/* Account link - disabled for launch
             <Link
               to="/account"
               className="magil-header__icon-btn"
@@ -177,6 +178,7 @@ export function Header({cart}: HeaderProps) {
             >
               <UserIcon />
             </Link>
+            */}
 
             <CartBadge cart={cart} />
           </div>
