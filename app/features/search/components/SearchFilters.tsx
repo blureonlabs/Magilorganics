@@ -212,4 +212,36 @@ const filterStyles = /* css */ `
   .search-filters__pill--form-active:hover {
     color: var(--magil-ink);
   }
+
+  /* Mobile: horizontal scroll for filter pills */
+  @media (max-width: 767px) {
+    .search-filters__header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 12px;
+    }
+    .search-filters__count {
+      font-size: 20px;
+    }
+    .search-filters__chips {
+      flex-direction: column;
+      gap: 12px;
+    }
+    .search-filters__group {
+      flex-wrap: nowrap;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scrollbar-width: none;
+      padding-bottom: 4px;
+    }
+    .search-filters__group::-webkit-scrollbar {
+      display: none;
+    }
+    .search-filters__pill {
+      flex-shrink: 0;
+      min-height: 44px;
+      display: inline-flex;
+      align-items: center;
+    }
+  }
 `;

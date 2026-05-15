@@ -282,6 +282,30 @@ const allCollectionsStyles = /* css */ `
     margin-top: 6px;
   }
 
+  /* Mobile: stats 2 per row, single column cards */
+  @media (max-width: 767px) {
+    .collections-hero {
+      padding: 40px 16px 30px;
+    }
+    .collections-hero__stats {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+    .collections-hero__stat-num {
+      font-size: 28px;
+    }
+    .collections-hero__tamil {
+      font-size: 16px;
+    }
+    .collections-brand-section {
+      padding: 40px 16px;
+    }
+    .collections-brand-section__grid {
+      grid-template-columns: 1fr !important;
+    }
+  }
+
   /* Brand sections */
   .collections-brand-section {
     padding: 60px 24px;

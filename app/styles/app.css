@@ -1335,9 +1335,10 @@ button.reset:hover:not(:has(> *)) {
   color: rgba(251, 246, 236, 0.8);
   text-decoration: none;
   transition: color 0.15s ease;
-  display: inline-block;
-  min-height: 28px;
-  line-height: 28px;
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  line-height: 1.4;
 }
 
 .magil-footer__link:hover {

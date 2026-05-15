@@ -17,6 +17,7 @@ export function ProductVariantSelector({productOptions}: VariantSelectorProps) {
             <div style={styles.optionLabel}>Choose {option.name}</div>
 
             <div
+              className="pdp-variant-grid"
               style={{
                 ...styles.optionGrid,
                 gridTemplateColumns: `repeat(${Math.min(option.optionValues.length, 3)}, 1fr)`,
@@ -150,9 +151,13 @@ const styles: Record<string, React.CSSProperties> = {
 };
 
 const variantResponsiveStyles = /* css */ `
-  @media (max-width: 480px) {
+  @media (max-width: 767px) {
     .pdp-variant-grid {
-      grid-template-columns: repeat(2, 1fr) !important;
+      grid-template-columns: 1fr !important;
+    }
+    .pdp-variant-grid a {
+      width: 100%;
+      min-height: 48px;
     }
   }
 `;

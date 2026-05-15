@@ -169,6 +169,7 @@ export function CartPage({cart: originalCart}: CartPageProps) {
             <FreeShippingBar subtotal={subtotalNum} />
 
             <div
+              className="magil-cart-items-wrap"
               style={{
                 background: '#fff',
                 borderRadius: 18,
@@ -178,6 +179,7 @@ export function CartPage({cart: originalCart}: CartPageProps) {
             >
               {/* Column headers */}
               <div
+                className="magil-cart-col-headers"
                 style={{
                   display: 'grid',
                   gridTemplateColumns: '120px 1fr auto auto',
@@ -269,6 +271,25 @@ export function CartPage({cart: originalCart}: CartPageProps) {
             }
             .magil-order-summary {
               position: static !important;
+            }
+          }
+
+          @media (max-width: 767px) {
+            .magil-cart-hero {
+              padding: 20px 16px 18px !important;
+            }
+            .magil-cart-main {
+              padding: 20px 16px 60px !important;
+            }
+            .magil-cart-grid {
+              grid-template-columns: 1fr !important;
+              gap: 20px !important;
+            }
+            .magil-cart-col-headers {
+              display: none !important;
+            }
+            .magil-cart-items-wrap {
+              padding: 8px 14px !important;
             }
           }
 

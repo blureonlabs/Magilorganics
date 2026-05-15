@@ -266,6 +266,32 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 }
 .skeleton-pulse { animation: magil-skeleton-pulse 1.8s ease-in-out infinite; }
 
+/* Global mobile touch & UX */
+body {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a, button, input, select, textarea, [role="button"] {
+  touch-action: manipulation;
+}
+
+/* Prevent horizontal overflow on all pages */
+html, body {
+  overflow-x: hidden;
+}
+
+/* Mobile: min button height & min font sizes */
+@media (max-width: 767px) {
+  .btn {
+    min-height: 44px;
+    font-size: 14px;
+  }
+
+  input, select, textarea {
+    font-size: 16px; /* Prevent iOS zoom */
+  }
+}
+
 /* Focus */
 :focus-visible {
   outline: 2px solid var(--magil-gold);

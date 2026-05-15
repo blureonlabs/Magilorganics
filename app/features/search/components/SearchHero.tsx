@@ -151,10 +151,24 @@ const searchHeroStyles = /* css */ `
     flex-shrink: 0;
   }
 
-  @media (max-width: 600px) {
+  @media (max-width: 767px) {
+    .search-hero {
+      padding: 24px 16px 32px;
+    }
+    .search-hero__form {
+      flex-wrap: wrap;
+      border-radius: 16px;
+      padding: 8px 16px;
+    }
+    .search-hero__input {
+      width: 100%;
+      min-width: 100%;
+    }
     .search-hero__submit {
-      padding: 10px 16px;
-      font-size: 12px;
+      width: 100%;
+      padding: 12px 16px;
+      font-size: 14px;
+      min-height: 44px;
     }
   }
 `;

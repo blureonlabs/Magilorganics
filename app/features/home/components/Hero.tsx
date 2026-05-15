@@ -237,7 +237,7 @@ const heroStyles = /* css */ `
     font-weight: 500;
     letter-spacing: 0.02em;
   }
-  @media (max-width: 768px) {
+  @media (max-width: 767px) {
     .home-hero__tamil { font-size: 16px; }
   }
 
@@ -275,6 +275,38 @@ const heroStyles = /* css */ `
     color: var(--magil-ink-soft);
     margin-top: 6px;
     letter-spacing: 0.04em;
+  }
+
+  /* Mobile hero optimizations */
+  @media (max-width: 767px) {
+    .home-hero__grid {
+      padding: 24px 16px 40px;
+    }
+    .home-hero__heading {
+      font-size: 38px;
+    }
+    .home-hero__body {
+      font-size: 15px;
+      margin-top: 16px;
+    }
+    .home-hero__cta {
+      flex-direction: column;
+      margin-top: 24px;
+    }
+    .home-hero__cta .btn {
+      width: 100%;
+      justify-content: center;
+      min-height: 48px;
+    }
+    .home-hero__trust {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+      margin-top: 32px;
+    }
+    .home-hero__trust-num {
+      font-size: 26px;
+    }
   }
 
   /* Right side product showcase */

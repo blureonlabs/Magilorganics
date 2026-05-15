@@ -160,4 +160,4 @@ const galleryResponsiveStyles = /* css */ `
       scroll-snap-align: start;
     }
   }
-`;
+`; // Gallery is already full width on mobile via single-column grid in ProductPage

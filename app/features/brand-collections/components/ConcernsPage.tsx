@@ -407,6 +407,29 @@ const concernsStyles = /* css */ `
     gap: 6px;
   }
 
+  /* Mobile: horizontal scroll pills for quick jump */
+  @media (max-width: 767px) {
+    .concerns-hero {
+      padding: 40px 16px 30px;
+    }
+    .concerns-hero__nav {
+      flex-direction: row;
+      overflow-x: auto;
+      -webkit-overflow-scrolling: touch;
+      scroll-snap-type: x mandatory;
+      gap: 8px;
+      padding: 12px 16px;
+      border-radius: 999px;
+      scrollbar-width: none;
+    }
+    .concerns-hero__nav::-webkit-scrollbar {
+      display: none;
+    }
+    .concerns-hero__nav > .eyebrow {
+      display: none;
+    }
+  }
+
   /* Concern sections */
   .concern-section {
     padding: 80px 24px;
@@ -604,5 +627,40 @@ const concernsStyles = /* css */ `
     gap: 14px;
     margin-top: 28px;
     flex-wrap: wrap;
+  }
+
+  /* Mobile: concern sections full width, stacked */
+  @media (max-width: 767px) {
+    .concern-section {
+      padding: 50px 16px;
+    }
+    .concern-section__hero {
+      gap: 24px;
+    }
+    .concern-section__headline {
+      font-size: 26px;
+    }
+    .concern-section__body {
+      font-size: 15px;
+    }
+    .concern-section__stat-num {
+      font-size: 32px;
+    }
+    .concern-section__products-grid {
+      gap: 16px;
+    }
+    .vaidyar-cta-section {
+      padding: 50px 16px 60px;
+    }
+    .vaidyar-cta {
+      padding: 32px 20px;
+    }
+    .vaidyar-cta__actions {
+      flex-direction: column;
+    }
+    .vaidyar-cta__actions .btn {
+      width: 100%;
+      justify-content: center;
+    }
   }
 `;

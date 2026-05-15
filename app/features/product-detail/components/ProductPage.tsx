@@ -60,7 +60,7 @@ export function ProductPage({
     <div style={{paddingBottom: 84}}>
       {/* Hero: Gallery + Info */}
       <section style={styles.heroSection}>
-        <div style={styles.heroContainer}>
+        <div style={styles.heroContainer} className="pdp-hero-container">
           {/* Breadcrumb */}
           <div style={styles.breadcrumb}>
             <a href="/" style={{color: 'inherit'}}>
@@ -133,7 +133,7 @@ const styles: Record<string, React.CSSProperties> = {
     maxWidth: 1440,
     margin: '0 auto',
     padding: '0 48px',
-  },
+  } as React.CSSProperties,
   breadcrumb: {
     fontSize: 13,
     color: 'var(--magil-ink-soft)',
@@ -164,6 +164,13 @@ const pageResponsiveStyles = /* css */ `
     .pdp-hero-grid {
       grid-template-columns: 1fr !important;
       gap: 24px !important;
+    }
+  }
+
+  /* Mobile: reduce container padding, full-width gallery */
+  @media (max-width: 767px) {
+    .pdp-hero-container {
+      padding: 0 16px !important;
     }
   }
 `;

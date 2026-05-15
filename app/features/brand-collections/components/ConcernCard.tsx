@@ -89,4 +89,30 @@ const concernCardStyles = /* css */ `
     color: var(--magil-ink-soft);
     margin-left: auto;
   }
+
+  /* Mobile: pill style for horizontal scroll */
+  @media (max-width: 767px) {
+    .concern-nav-card {
+      flex-shrink: 0;
+      width: auto;
+      white-space: nowrap;
+      padding: 8px 14px;
+      border-radius: 999px;
+      border: 1px solid var(--magil-line);
+      background: #fff;
+      scroll-snap-align: start;
+      min-height: 44px;
+    }
+    .concern-nav-card--active {
+      background: var(--magil-red-deep);
+      color: var(--magil-cream);
+      border-color: var(--magil-red-deep);
+    }
+    .concern-nav-card--active .concern-nav-card__tamil {
+      color: rgba(251, 246, 236, 0.7);
+    }
+    .concern-nav-card__tamil {
+      margin-left: 4px;
+    }
+  }
 `;

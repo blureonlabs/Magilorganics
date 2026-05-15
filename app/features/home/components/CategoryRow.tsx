@@ -213,4 +213,24 @@ const categoryStyles = /* css */ `
     margin-top: 4px;
     letter-spacing: 0.04em;
   }
+
+  /* Mobile: smaller circles & text */
+  @media (max-width: 767px) {
+    .category-row {
+      padding: 40px 16px;
+    }
+    .category-row__grid {
+      gap: 16px;
+    }
+    .category-row__circle {
+      margin-bottom: 8px;
+    }
+    .category-row__circle svg {
+      width: 32px;
+      height: 32px;
+    }
+    .category-row__tamil {
+      font-size: 11px;
+    }
+  }
 `;

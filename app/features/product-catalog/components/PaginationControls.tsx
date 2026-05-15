@@ -103,4 +103,18 @@ const paginationStyles = /* css */ `
     color: var(--magil-ink-soft);
     padding: 14px 32px;
   }
+
+  /* Mobile: tighter grid gap */
+  @media (max-width: 767px) {
+    .magil-product-grid {
+      gap: 12px;
+    }
+    .magil-pagination-wrap {
+      gap: 28px;
+    }
+    .magil-pagination__btn {
+      min-height: 44px;
+      padding: 12px 24px;
+    }
+  }
 `;

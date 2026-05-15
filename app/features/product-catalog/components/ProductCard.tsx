@@ -404,23 +404,34 @@ const productCardStyles = /* css */ `
   /* Mobile: smaller text and spacing */
   @media (max-width: 767px) {
     .magil-product-card__title {
-      font-size: 15px;
+      font-size: 14px;
     }
     .magil-product-card__details {
-      padding: 12px 12px 8px;
+      padding: 10px 10px 8px;
     }
     .magil-product-card__price {
-      font-size: 17px;
+      font-size: 16px;
     }
-    .magil-product-card__cart-action {
-      padding: 8px 12px 12px;
-    }
-    .magil-product-card__add-btn {
-      padding: 10px 12px;
+    .magil-product-card__rating {
       font-size: 11px;
     }
+    .magil-product-card__rating-text {
+      font-size: 11px;
+    }
+    .magil-product-card__cart-action {
+      padding: 8px 10px 10px;
+    }
+    .magil-product-card__add-btn {
+      width: 100%;
+      min-height: 44px;
+      padding: 10px 12px;
+      font-size: 12px;
+    }
     .magil-product-card__variant-selector {
-      padding: 0 12px;
+      padding: 0 10px;
+    }
+    .magil-product-card__compare-price {
+      font-size: 12px;
     }
   }
 `;

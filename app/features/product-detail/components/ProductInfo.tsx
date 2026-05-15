@@ -104,7 +104,7 @@ export function ProductInfo({
 
       {/* Title */}
       <h1
-        className="serif-bold"
+        className="serif-bold pdp-title"
         style={{
           fontSize: 44,
           lineHeight: 1,
@@ -190,7 +190,7 @@ export function ProductInfo({
       </p>
 
       {/* Benefits grid */}
-      <div style={styles.benefitsGrid}>
+      <div style={styles.benefitsGrid} className="pdp-benefits-grid">
         {BENEFITS.map((b) => (
           <div key={b.title} style={{textAlign: 'center'}}>
             <div style={styles.benefitCircle}>
@@ -232,7 +232,7 @@ export function ProductInfo({
       </div>
 
       {/* Trust strip */}
-      <div style={styles.trustGrid}>
+      <div style={styles.trustGrid} className="pdp-trust-grid">
         {TRUST_ITEMS.map(({Icon, line1, line2}) => (
           <div key={line1} style={{textAlign: 'center'}}>
             <DoodleCircle
@@ -314,8 +314,16 @@ const styles: Record<string, React.CSSProperties> = {
 
 const infoResponsiveStyles = /* css */ `
   @media (max-width: 767px) {
-    .pdp-info h1 {
-      font-size: 32px !important;
+    .pdp-title {
+      font-size: 28px !important;
+    }
+    .pdp-benefits-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 12px !important;
+    }
+    .pdp-trust-grid {
+      grid-template-columns: repeat(2, 1fr) !important;
+      gap: 12px !important;
     }
   }
 `;
