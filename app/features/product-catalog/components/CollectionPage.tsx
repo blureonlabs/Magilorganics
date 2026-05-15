@@ -1,5 +1,6 @@
-import {useState} from 'react';
+import {useState, useRef, useEffect} from 'react';
 import {useSearchParams} from 'react-router';
+import {ChevronIcon} from '~/shared/icons';
 import {CollectionHero} from './CollectionHero';
 import {ProductCard} from './ProductCard';
 import {PaginationControls} from './PaginationControls';
@@ -39,6 +40,20 @@ export function CollectionPage({collection}: CollectionPageProps) {
   const [searchParams, setSearchParams] = useSearchParams();
   const sortValue = searchParams.get('sort') || 'popular';
   const productCount = collection.products.nodes.length;
+  const [sortOpen, setSortOpen] = useState(false);
+  const sortRef = useRef<HTMLDivElement>(null);
+
+  const currentSortLabel = SORT_OPTIONS.find(o => o.value === sortValue)?.label || 'Most popular';
+
+  useEffect(() => {
+    function handleClickOutside(e: MouseEvent) {
+      if (sortRef.current && !sortRef.current.contains(e.target as Node)) {
+        setSortOpen(false);
+      }
+    }
+    if (sortOpen) document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [sortOpen]);
 
   return (
     <>
@@ -57,23 +72,37 @@ export function CollectionPage({collection}: CollectionPageProps) {
               <strong>{productCount}</strong>{' '}
               {productCount === 1 ? 'product' : 'products'}
             </div>
-            <div className="magil-sort-bar__controls">
+            <div className="magil-sort-bar__controls" ref={sortRef}>
               <span className="magil-sort-bar__label">Sort by</span>
-              <select
-                className="magil-sort-bar__select"
-                value={sortValue}
-                onChange={(e) => {
-                  const params = new URLSearchParams(searchParams);
-                  params.set('sort', e.target.value);
-                  setSearchParams(params, {preventScrollReset: true});
-                }}
+              <button
+                className="magil-sort-bar__trigger"
+                onClick={() => setSortOpen(!sortOpen)}
+                aria-expanded={sortOpen}
+                aria-haspopup="listbox"
               >
-                {SORT_OPTIONS.map((opt) => (
-                  <option key={opt.value} value={opt.value}>
-                    {opt.label}
-                  </option>
-                ))}
-              </select>
+                {currentSortLabel}
+                <ChevronIcon size={16} />
+              </button>
+              {sortOpen && (
+                <div className="magil-sort-bar__dropdown" role="listbox">
+                  {SORT_OPTIONS.map((opt) => (
+                    <button
+                      key={opt.value}
+                      className={`magil-sort-bar__option ${sortValue === opt.value ? 'magil-sort-bar__option--active' : ''}`}
+                      role="option"
+                      aria-selected={sortValue === opt.value}
+                      onClick={() => {
+                        const params = new URLSearchParams(searchParams);
+                        params.set('sort', opt.value);
+                        setSearchParams(params, {preventScrollReset: true});
+                        setSortOpen(false);
+                      }}
+                    >
+                      {opt.label}
+                    </button>
+                  ))}
+                </div>
+              )}
             </div>
           </div>
 
@@ -135,6 +164,7 @@ const collectionPageStyles = /* css */ `
     display: flex;
     align-items: center;
     gap: 10px;
+    position: relative;
   }
 
   .magil-sort-bar__label {
@@ -143,26 +173,70 @@ const collectionPageStyles = /* css */ `
     font-weight: 500;
   }
 
-  .magil-sort-bar__select {
+  .magil-sort-bar__trigger {
+    display: flex;
+    align-items: center;
+    gap: 8px;
     padding: 10px 16px;
     border: 1px solid var(--magil-line);
-    border-radius: 999px;
+    border-radius: 12px;
     background: #fff;
     font-size: 14px;
     font-family: inherit;
+    font-weight: 500;
     color: var(--magil-ink);
     cursor: pointer;
-    -webkit-appearance: none;
-    appearance: none;
-    background-image: url("data:image/svg+xml,%3Csvg width='10' height='6' viewBox='0 0 10 6' fill='none' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M1 1L5 5L9 1' stroke='%235A3A2A' stroke-width='1.5' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
-    background-repeat: no-repeat;
-    background-position: right 14px center;
-    padding-right: 36px;
+    transition: border-color 0.15s ease;
+    min-height: 44px;
+    white-space: nowrap;
   }
-
-  .magil-sort-bar__select:focus-visible {
+  .magil-sort-bar__trigger:hover {
+    border-color: var(--magil-red-deep);
+  }
+  .magil-sort-bar__trigger:focus-visible {
     outline: 2px solid var(--magil-gold);
     outline-offset: 2px;
+  }
+
+  .magil-sort-bar__dropdown {
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    min-width: 200px;
+    background: #fff;
+    border: 1px solid var(--magil-line);
+    border-radius: 14px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+    z-index: 20;
+    overflow: hidden;
+    animation: sortDropIn 0.15s ease;
+  }
+  @keyframes sortDropIn {
+    from { opacity: 0; transform: translateY(-6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+
+  .magil-sort-bar__option {
+    display: block;
+    width: 100%;
+    padding: 12px 18px;
+    text-align: left;
+    font-size: 14px;
+    font-family: inherit;
+    color: var(--magil-ink);
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    transition: background 0.1s ease;
+    min-height: 44px;
+  }
+  .magil-sort-bar__option:hover {
+    background: var(--magil-cream);
+  }
+  .magil-sort-bar__option--active {
+    color: var(--magil-red-deep);
+    font-weight: 600;
+    background: var(--magil-cream);
   }
 
   @media (min-width: 768px) {
@@ -184,11 +258,9 @@ const collectionPageStyles = /* css */ `
       gap: 6px;
     }
 
-    .magil-sort-bar__select {
+    .magil-sort-bar__trigger {
       width: 100%;
-      font-size: 14px;
-      padding: 12px 16px;
-      padding-right: 36px;
+      justify-content: space-between;
     }
 
     .magil-sort-bar__label {
