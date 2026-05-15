@@ -304,10 +304,11 @@ const heroStyles = /* css */ `
 
   .home-hero__product-disc {
     position: absolute;
-    inset: 5% 5% 8%;
+    inset: 8% 8% 12%;
     background: radial-gradient(circle at 40% 30%, var(--magil-gold-light) 0%, var(--magil-gold) 50%, var(--magil-clay) 100%);
     border-radius: 50%;
     box-shadow: 0 30px 80px rgba(184,115,42,0.35), inset 0 -20px 60px rgba(139,14,32,0.25);
+    z-index: 1;
   }
 
   .home-hero__packshot {
@@ -317,6 +318,11 @@ const heroStyles = /* css */ `
     align-items: center;
     justify-content: center;
     z-index: 2;
+  }
+  .home-hero__packshot svg {
+    width: 55%;
+    height: auto;
+    max-width: 280px;
   }
 
   .home-hero__floating-tag {
