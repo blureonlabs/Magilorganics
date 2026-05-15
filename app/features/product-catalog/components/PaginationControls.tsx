@@ -58,6 +58,10 @@ const paginationStyles = /* css */ `
     grid-template-columns: repeat(2, 1fr);
     gap: 16px;
     width: 100%;
+    align-items: stretch;
+  }
+  .magil-product-grid > * {
+    height: 100%;
   }
 
   @media (min-width: 768px) {
