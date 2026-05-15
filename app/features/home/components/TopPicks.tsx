@@ -118,13 +118,14 @@ const topPicksStyles = /* css */ `
 
   .top-picks__tabs {
     display: flex;
-    gap: 6px;
-    background: var(--magil-cream-warm);
-    padding: 6px;
-    border-radius: 999px;
-    border: 1px solid var(--magil-line);
-    flex-wrap: wrap;
+    gap: 8px;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    padding-bottom: 4px;
   }
+  .top-picks__tabs::-webkit-scrollbar { display: none; }
 
   .top-picks__tab {
     padding: 10px 20px;
@@ -133,12 +134,16 @@ const topPicksStyles = /* css */ `
     font-weight: 600;
     letter-spacing: 0.04em;
     color: var(--magil-ink);
-    background: transparent;
-    transition: background 0.2s ease, color 0.2s ease;
+    background: var(--magil-cream-warm);
+    border: 1px solid var(--magil-line);
+    transition: background 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
   }
   .top-picks__tab--active {
     color: var(--magil-cream);
     background: var(--magil-red-deep);
+    border-color: var(--magil-red-deep);
   }
 
   .top-picks__scroll {
