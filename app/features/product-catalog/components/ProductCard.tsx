@@ -306,8 +306,7 @@ const productCardStyles = /* css */ `
     inset: 0;
     width: 100%;
     height: 100%;
-    object-fit: contain;
-    padding: 12px;
+    object-fit: cover;
   }
 
   .magil-product-card__image-placeholder {
