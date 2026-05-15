@@ -115,7 +115,7 @@ const collectionHeroStyles = /* css */ `
 
   .magil-collection-hero__breadcrumb a:hover {
     color: var(--magil-red-deep);
-    text-decoration: underline;
+    text-decoration: none;
   }
 
   .magil-collection-hero__breadcrumb-current {
