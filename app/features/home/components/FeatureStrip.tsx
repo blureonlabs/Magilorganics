@@ -3,24 +3,25 @@ export function FeatureStrip() {
     <section className="feature-strip-section">
       <div className="feature-strip">
         {/* Decorative arcs */}
-        <svg
-          className="feature-strip__motif"
-          viewBox="0 0 200 200"
-          aria-hidden="true"
-        >
-          {[20, 40, 60, 80, 100].map((r) => (
-            <circle
-              key={r}
-              cx="100"
-              cy="100"
-              r={r}
-              stroke="var(--magil-gold)"
-              strokeWidth="0.4"
-              fill="none"
-              strokeDasharray="0.6 1.2"
-            />
-          ))}
-        </svg>
+        <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none'}} aria-hidden="true">
+          <svg
+            className="feature-strip__motif"
+            viewBox="0 0 200 200"
+          >
+            {[20, 40, 60, 80, 100].map((r) => (
+              <circle
+                key={r}
+                cx="100"
+                cy="100"
+                r={r}
+                stroke="var(--magil-gold)"
+                strokeWidth="0.4"
+                fill="none"
+                strokeDasharray="0.6 1.2"
+              />
+            ))}
+          </svg>
+        </div>
 
         <div className="feature-strip__content">
           <div className="eyebrow" style={{color: 'var(--magil-gold)'}}>
@@ -86,11 +87,12 @@ const featureStripStyles = /* css */ `
 
   .feature-strip__motif {
     position: absolute;
-    top: -100px;
-    right: -100px;
-    width: 400px;
-    height: 400px;
-    opacity: 0.15;
+    top: 5%;
+    right: 5%;
+    width: 35%;
+    max-width: 380px;
+    aspect-ratio: 1;
+    opacity: 0.08;
     pointer-events: none;
   }
 

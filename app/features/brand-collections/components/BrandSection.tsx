@@ -64,17 +64,19 @@ export function BrandSection({brand, productCount, blurb}: BrandSectionProps) {
 
       <div className="brand-section__stats" style={{background: config.bgGradient}}>
         {/* Decorative motif */}
-        <svg
-          className="brand-section__stats-motif"
-          viewBox="0 0 200 200"
-          aria-hidden="true"
-        >
-          {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-            <g key={a} transform={`rotate(${a} 100 100)`}>
-              <ellipse cx="100" cy="40" rx="14" ry="50" fill="var(--magil-gold)" />
-            </g>
-          ))}
-        </svg>
+        <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none', borderRadius: 'inherit'}} aria-hidden="true">
+          <svg
+            className="brand-section__stats-motif"
+            viewBox="0 0 200 200"
+          >
+            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
+              <g key={a} transform={`rotate(${a} 100 100)`}>
+                <ellipse cx="100" cy="40" rx="14" ry="48" fill="var(--magil-gold)" />
+              </g>
+            ))}
+            <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
+          </svg>
+        </div>
         <div style={{position: 'relative'}}>
           <div className="serif-bold brand-section__stats-num">
             {productCount}+
@@ -159,11 +161,12 @@ const brandSectionStyles = /* css */ `
   }
   .brand-section__stats-motif {
     position: absolute;
-    right: -40px;
-    top: -40px;
-    width: 200px;
-    height: 200px;
-    opacity: 0.15;
+    right: 5%;
+    top: 5%;
+    width: 35%;
+    max-width: 200px;
+    aspect-ratio: 1;
+    opacity: 0.08;
     pointer-events: none;
   }
   .brand-section__stats-num {

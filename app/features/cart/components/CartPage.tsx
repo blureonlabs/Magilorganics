@@ -44,37 +44,41 @@ export function CartPage({cart: originalCart}: CartPageProps) {
         }}
       >
         {/* Decorative mandala */}
-        <svg
-          style={{
-            position: 'absolute',
-            top: '-20%',
-            right: '-5%',
-            width: 320,
-            height: 320,
-            opacity: 0.06,
-          }}
-          viewBox="0 0 200 200"
-          aria-hidden="true"
-        >
-          {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-            <g key={a} transform={`rotate(${a} 100 100)`}>
-              <ellipse
-                cx="100"
-                cy="40"
-                rx="14"
-                ry="50"
-                fill="var(--magil-red-deep)"
-              />
-              <ellipse
-                cx="100"
-                cy="22"
-                rx="8"
-                ry="14"
-                fill="var(--magil-gold)"
-              />
-            </g>
-          ))}
-        </svg>
+        <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none'}} aria-hidden="true">
+          <svg
+            style={{
+              position: 'absolute',
+              top: '5%',
+              right: '5%',
+              width: '35%',
+              maxWidth: 380,
+              aspectRatio: '1',
+              opacity: 0.06,
+            }}
+            viewBox="0 0 200 200"
+          >
+            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
+              <g key={a} transform={`rotate(${a} 100 100)`}>
+                <ellipse
+                  cx="100"
+                  cy="40"
+                  rx="14"
+                  ry="48"
+                  fill="var(--magil-red-deep)"
+                />
+                <ellipse
+                  cx="100"
+                  cy="25"
+                  rx="8"
+                  ry="14"
+                  fill="var(--magil-gold)"
+                />
+                <circle cx="100" cy="25" r="4" fill="var(--magil-red-dark)" />
+              </g>
+            ))}
+            <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
+          </svg>
+        </div>
 
         <div style={{maxWidth: 1280, margin: '0 auto', position: 'relative'}}>
           {/* Breadcrumb */}

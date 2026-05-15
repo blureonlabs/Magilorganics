@@ -98,14 +98,18 @@ export function ConcernsPage({products}: ConcernsPageProps) {
     <div>
       {/* Hero */}
       <section className="concerns-hero">
-        <svg className="concerns-hero__motif" viewBox="0 0 200 200" aria-hidden="true">
-          {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-            <g key={a} transform={`rotate(${a} 100 100)`}>
-              <ellipse cx="100" cy="40" rx="14" ry="50" fill="var(--magil-red-deep)" />
-              <ellipse cx="100" cy="22" rx="8" ry="14" fill="var(--magil-gold)" />
-            </g>
-          ))}
-        </svg>
+        <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none'}} aria-hidden="true">
+          <svg className="concerns-hero__motif" viewBox="0 0 200 200">
+            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
+              <g key={a} transform={`rotate(${a} 100 100)`}>
+                <ellipse cx="100" cy="40" rx="14" ry="48" fill="var(--magil-red-deep)" />
+                <ellipse cx="100" cy="25" rx="8" ry="14" fill="var(--magil-gold)" />
+                <circle cx="100" cy="25" r="4" fill="var(--magil-red-dark)" />
+              </g>
+            ))}
+            <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
+          </svg>
+        </div>
 
         <div className="concerns-hero__inner">
           <div className="concerns-hero__grid">
@@ -164,14 +168,18 @@ export function ConcernsPage({products}: ConcernsPageProps) {
       {/* Vaidyar CTA */}
       <section className="vaidyar-cta-section">
         <div className="vaidyar-cta">
-          <svg className="vaidyar-cta__motif" viewBox="0 0 200 200" aria-hidden="true">
-            {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-              <g key={a} transform={`rotate(${a} 100 100)`}>
-                <ellipse cx="100" cy="40" rx="14" ry="50" fill="var(--magil-red-deep)" />
-                <ellipse cx="100" cy="22" rx="8" ry="14" fill="var(--magil-red-dark)" />
-              </g>
-            ))}
-          </svg>
+          <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none'}} aria-hidden="true">
+            <svg className="vaidyar-cta__motif" viewBox="0 0 200 200">
+              {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
+                <g key={a} transform={`rotate(${a} 100 100)`}>
+                  <ellipse cx="100" cy="40" rx="14" ry="48" fill="var(--magil-red-deep)" />
+                  <ellipse cx="100" cy="25" rx="8" ry="14" fill="var(--magil-red-dark)" />
+                  <circle cx="100" cy="25" r="4" fill="var(--magil-red-dark)" />
+                </g>
+              ))}
+              <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
+            </svg>
+          </div>
           <div className="vaidyar-cta__content">
             <div className="eyebrow">
               Personalized guidance &middot;{' '}
@@ -335,11 +343,12 @@ const concernsStyles = /* css */ `
   }
   .concerns-hero__motif {
     position: absolute;
-    top: -30%;
-    right: -15%;
-    width: 700px;
-    height: 700px;
-    opacity: 0.05;
+    top: 5%;
+    right: 5%;
+    width: 35%;
+    max-width: 400px;
+    aspect-ratio: 1;
+    opacity: 0.06;
     pointer-events: none;
   }
   .concerns-hero__inner {
@@ -560,11 +569,12 @@ const concernsStyles = /* css */ `
   }
   .vaidyar-cta__motif {
     position: absolute;
-    bottom: -80px;
-    right: -80px;
-    width: 320px;
-    height: 320px;
-    opacity: 0.18;
+    bottom: 5%;
+    right: 5%;
+    width: 35%;
+    max-width: 320px;
+    aspect-ratio: 1;
+    opacity: 0.07;
     pointer-events: none;
   }
   .vaidyar-cta__content {

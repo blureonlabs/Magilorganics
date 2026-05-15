@@ -180,7 +180,7 @@ const heroStyles = /* css */ `
   .home-hero {
     position: relative;
     background: linear-gradient(135deg, #FBF6EC 0%, #F5EBD7 100%);
-    overflow: hidden;
+    overflow: clip;
     padding-top: 40px;
   }
 

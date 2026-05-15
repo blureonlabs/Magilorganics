@@ -9,30 +9,33 @@ export function SearchHero({term}: SearchHeroProps) {
   return (
     <section className="search-hero">
       {/* Decorative peacock wheel */}
-      <svg
-        className="search-hero__motif"
-        viewBox="0 0 200 200"
-        aria-hidden="true"
-      >
-        {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
-          <g key={a} transform={`rotate(${a} 100 100)`}>
-            <ellipse
-              cx="100"
-              cy="40"
-              rx="14"
-              ry="50"
-              fill="var(--magil-red-deep)"
-            />
-            <ellipse
-              cx="100"
-              cy="22"
-              rx="8"
-              ry="14"
-              fill="var(--magil-gold)"
-            />
-          </g>
-        ))}
-      </svg>
+      <div style={{position: 'absolute', inset: 0, overflow: 'hidden', pointerEvents: 'none'}} aria-hidden="true">
+        <svg
+          className="search-hero__motif"
+          viewBox="0 0 200 200"
+        >
+          {[0, 30, 60, 90, 120, 150, 180, 210, 240, 270, 300, 330].map((a) => (
+            <g key={a} transform={`rotate(${a} 100 100)`}>
+              <ellipse
+                cx="100"
+                cy="40"
+                rx="14"
+                ry="48"
+                fill="var(--magil-red-deep)"
+              />
+              <ellipse
+                cx="100"
+                cy="25"
+                rx="8"
+                ry="14"
+                fill="var(--magil-gold)"
+              />
+              <circle cx="100" cy="25" r="4" fill="var(--magil-red-dark)" />
+            </g>
+          ))}
+          <circle cx="100" cy="100" r="18" fill="var(--magil-gold)" />
+        </svg>
+      </div>
 
       <div className="search-hero__inner">
         <h1 className="search-hero__heading serif">
@@ -79,11 +82,12 @@ const searchHeroStyles = /* css */ `
 
   .search-hero__motif {
     position: absolute;
-    top: -30%;
-    right: -5%;
-    width: 480px;
-    height: 480px;
-    opacity: 0.05;
+    top: 5%;
+    right: 5%;
+    width: 35%;
+    max-width: 380px;
+    aspect-ratio: 1;
+    opacity: 0.06;
     pointer-events: none;
   }
 
