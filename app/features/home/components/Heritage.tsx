@@ -1,4 +1,5 @@
 import {PeacockMark} from '~/shared/motifs/PeacockMark';
+import {DoodleUnderline, DoodleLeaf} from '~/shared/motifs/DoodleElements';
 
 export function Heritage() {
   return (
@@ -15,6 +16,11 @@ export function Heritage() {
           bring that knowing into your home, untouched.
         </p>
 
+        {/* Hand-drawn underline accent under the quote */}
+        <div style={{display: 'flex', justifyContent: 'center', marginTop: 20}}>
+          <DoodleUnderline width={160} color="var(--magil-gold)" strokeWidth={1.5} />
+        </div>
+
         <div className="feather-divider heritage__divider">
           <PeacockMark size={28} />
         </div>
@@ -23,10 +29,18 @@ export function Heritage() {
           <div className="serif-bold heritage__author">
             Karthik Subramaniam
           </div>
-          <div className="heritage__title">
+          <div className="heritage__title doodle-text">
             FOUNDER &middot; 4th GENERATION SIDDHA FAMILY &middot; KARAIKUDI
           </div>
         </div>
+      </div>
+
+      {/* Decorative doodle leaves — subtle accents */}
+      <div style={{position: 'absolute', top: '15%', left: '5%', opacity: 0.12, pointerEvents: 'none'}} aria-hidden="true">
+        <DoodleLeaf width={24} color="var(--magil-leaf)" />
+      </div>
+      <div style={{position: 'absolute', bottom: '18%', right: '6%', opacity: 0.10, pointerEvents: 'none', transform: 'rotate(45deg)'}} aria-hidden="true">
+        <DoodleLeaf width={20} color="var(--magil-leaf)" />
       </div>
 
       {/* Decorative peacock */}

@@ -9,6 +9,7 @@ import {
   LeafIcon,
   ShieldIcon,
 } from '~/shared/icons';
+import {DoodleCircle} from '~/shared/motifs/DoodleElements';
 import {ProductVariantSelector} from './VariantSelector';
 import {AddToCartButton} from './AddToCartButton';
 
@@ -234,9 +235,19 @@ export function ProductInfo({
       <div style={styles.trustGrid}>
         {TRUST_ITEMS.map(({Icon, line1, line2}) => (
           <div key={line1} style={{textAlign: 'center'}}>
-            <div style={styles.trustCircle}>
+            <DoodleCircle
+              width={48}
+              color="var(--magil-ink-soft)"
+              strokeWidth={1}
+              style={{
+                margin: '0 auto 8px',
+                background: 'var(--magil-cream-warm)',
+                borderRadius: '50%',
+                color: 'var(--magil-ink)',
+              }}
+            >
               <Icon size={22} />
-            </div>
+            </DoodleCircle>
             <div
               style={{
                 fontSize: 11,

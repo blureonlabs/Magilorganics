@@ -36,6 +36,13 @@
   --magil-error:      #DC2626;
   --magil-info:       #2563EB;
 
+  /* Vibrant accents (Colorful layer — for CTAs, badges, highlights) */
+  --magil-vibrant-red:    linear-gradient(135deg, #C8102E 0%, #8B0E20 100%);
+  --magil-vibrant-gold:   linear-gradient(135deg, #F4D06F 0%, #E8A317 100%);
+  --magil-vibrant-leaf:   linear-gradient(135deg, #6E8E5C 0%, #2A5F3E 100%);
+  --magil-vibrant-sunset: linear-gradient(135deg, #E8A317 0%, #C8102E 100%);
+  --magil-vibrant-earth:  linear-gradient(135deg, #B8732A 0%, #5C0815 100%);
+
   /* Functional */
   --magil-line:       #E5D5B7;
   --magil-line-soft:  #F0E5CC;
@@ -47,6 +54,7 @@
   --font-body:    "Satoshi", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-tamil:   "Hind Madurai", "Catamaran", sans-serif;
   --font-script:  "Caveat", "Kalam", cursive;
+  --font-doodle:  "Delius Swash Caps", cursive;
 }
 
 /* ---- Responsive breakpoints ---- */
@@ -79,6 +87,7 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 .serif        { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; }
 .serif-bold   { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.01em; }
 .script       { font-family: var(--font-script); font-weight: 500; }
+.doodle-text  { font-family: var(--font-doodle); letter-spacing: 0.02em; }
 .tamil        { font-family: var(--font-tamil); }
 .eyebrow      {
   font-family: var(--font-body);
@@ -112,6 +121,61 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
   cursor: pointer;
   border: 1.5px solid transparent;
 }
+/* Vibrant gradient buttons */
+.btn-vibrant-red {
+  background: var(--magil-vibrant-red);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 16px rgba(200, 16, 46, 0.3);
+}
+.btn-vibrant-red:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(200, 16, 46, 0.4); }
+
+.btn-vibrant-gold {
+  background: var(--magil-vibrant-gold);
+  color: var(--magil-ink);
+  border: none;
+  box-shadow: 0 4px 16px rgba(232, 163, 23, 0.3);
+}
+.btn-vibrant-gold:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(232, 163, 23, 0.4); }
+
+.btn-vibrant-leaf {
+  background: var(--magil-vibrant-leaf);
+  color: #fff;
+  border: none;
+  box-shadow: 0 4px 16px rgba(42, 95, 62, 0.3);
+}
+.btn-vibrant-leaf:hover { transform: translateY(-2px); box-shadow: 0 8px 24px rgba(42, 95, 62, 0.4); }
+
+/* Doodle accent text */
+.doodle-text {
+  font-family: var(--font-doodle);
+  letter-spacing: 0.02em;
+}
+
+/* Vibrant gradient text */
+.gradient-text-sunset {
+  background: var(--magil-vibrant-sunset);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+/* Vibrant badge */
+.badge-vibrant {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 12px;
+  border-radius: 999px;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+}
+.badge-vibrant--red { background: var(--magil-vibrant-red); color: #fff; }
+.badge-vibrant--gold { background: var(--magil-vibrant-gold); color: var(--magil-ink); }
+.badge-vibrant--leaf { background: var(--magil-vibrant-leaf); color: #fff; }
+
 .btn-primary {
   background: var(--magil-red);
   color: #fff;

@@ -44,7 +44,7 @@ export function links() {
     },
     {
       rel: 'stylesheet',
-      href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700&family=Hind+Madurai:wght@400;500;600;700&display=swap',
+      href: 'https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700&family=Delius+Swash+Caps&family=Hind+Madurai:wght@400;500;600;700&display=swap',
     },
     {rel: 'preconnect', href: 'https://api.fontshare.com'},
     {
