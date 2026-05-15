@@ -93,21 +93,14 @@ export function ShopByConcern() {
               prefetch="intent"
             >
               <div
-                className="shop-concern__card-blob"
-                style={{background: c.color}}
-              />
-              <div
                 className="shop-concern__card-icon"
                 style={{background: c.color}}
               >
-                <c.Icon size={26} style={{color: '#fff'}} />
+                <c.Icon size={22} style={{color: '#fff'}} />
               </div>
-              <h3 className="shop-concern__card-name">{c.name}</h3>
-              <div className="shop-concern__card-footer">
-                <span>{c.count} remedies</span>
-                <span style={{color: c.color, fontWeight: 600}}>
-                  Explore &rarr;
-                </span>
+              <div className="shop-concern__card-text">
+                <h3 className="shop-concern__card-name">{c.name}</h3>
+                <span className="shop-concern__card-count">{c.count} remedies &rarr;</span>
               </div>
             </Link>
           ))}
@@ -175,55 +168,65 @@ const shopConcernStyles = /* css */ `
 
   .shop-concern__card {
     background: #fff;
-    border-radius: 18px;
-    padding: 32px 26px;
+    border-radius: 14px;
+    padding: 16px;
     text-decoration: none;
     color: inherit;
     border: 1px solid var(--magil-line-soft);
-    position: relative;
-    overflow: hidden;
+    display: flex;
+    align-items: center;
+    gap: 14px;
     transition: transform 0.2s ease, box-shadow 0.2s ease;
   }
   .shop-concern__card:hover {
-    transform: translateY(-4px);
-    box-shadow: 0 16px 40px rgba(0,0,0,0.08);
-  }
-
-  .shop-concern__card-blob {
-    position: absolute;
-    top: -20px;
-    right: -20px;
-    width: 80px;
-    height: 80px;
-    border-radius: 50%;
-    opacity: 0.1;
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(0,0,0,0.06);
   }
 
   .shop-concern__card-icon {
-    width: 56px;
-    height: 56px;
-    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-bottom: 20px;
+    flex-shrink: 0;
+  }
+
+  .shop-concern__card-text {
+    min-width: 0;
   }
 
   .shop-concern__card-name {
-    font-size: 22px;
+    font-size: 15px;
     font-weight: 700;
     margin: 0;
     color: var(--magil-ink);
+    line-height: 1.2;
   }
-  @media (max-width: 767px) {
-    .shop-concern__card-name { font-size: 16px; }
-  }
-  .shop-concern__card-footer {
-    margin-top: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
+
+  .shop-concern__card-count {
     font-size: 12px;
     color: var(--magil-ink-soft);
+    margin-top: 2px;
+    display: block;
+  }
+
+  @media (min-width: 768px) {
+    .shop-concern__card {
+      padding: 20px;
+      gap: 16px;
+    }
+    .shop-concern__card-icon {
+      width: 52px;
+      height: 52px;
+      border-radius: 14px;
+    }
+    .shop-concern__card-name {
+      font-size: 17px;
+    }
+    .shop-concern__card-count {
+      font-size: 13px;
+    }
   }
 `;
