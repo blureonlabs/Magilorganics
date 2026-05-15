@@ -1,4 +1,5 @@
 import {Link} from 'react-router';
+import {MukkuCorner} from '~/shared/motifs/MukkuCorner';
 
 interface CollectionHeroProps {
   title: string;
@@ -14,6 +15,10 @@ export function CollectionHero({
   return (
     <>
       <section className="magil-collection-hero">
+        {/* Corner accent — Mukku Pookal motif */}
+        <div className="magil-collection-hero__corner" aria-hidden="true">
+          <MukkuCorner size={80} />
+        </div>
         <div className="magil-collection-hero__inner">
           {/* Breadcrumb */}
           <nav className="magil-collection-hero__breadcrumb" aria-label="Breadcrumb">
@@ -56,6 +61,19 @@ const collectionHeroStyles = /* css */ `
     padding: 32px 16px 28px;
     position: relative;
     overflow: hidden;
+  }
+
+  .magil-collection-hero__corner {
+    position: absolute;
+    top: 12px;
+    right: 16px;
+    transform: scaleX(-1);
+    pointer-events: none;
+  }
+  @media (max-width: 767px) {
+    .magil-collection-hero__corner {
+      display: none;
+    }
   }
 
   .magil-collection-hero__inner {

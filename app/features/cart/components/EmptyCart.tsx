@@ -1,4 +1,5 @@
 import {Link} from 'react-router';
+import {VairamKolam} from '~/shared/motifs/VairamKolam';
 
 /**
  * Empty-cart state with illustration, heading, and CTA buttons.
@@ -10,7 +11,7 @@ export function EmptyCart() {
       style={{padding: '100px 48px 120px'}}
     >
       <div style={{maxWidth: 700, margin: '0 auto', textAlign: 'center'}}>
-        {/* Illustration circle */}
+        {/* Illustration — Vairam (diamond) kolam */}
         <div
           style={{
             width: 140,
@@ -25,18 +26,7 @@ export function EmptyCart() {
             border: '3px solid var(--magil-gold)',
           }}
         >
-          <svg
-            width="60"
-            height="60"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="var(--magil-red-deep)"
-            strokeWidth="1.5"
-            aria-hidden="true"
-          >
-            <path d="M5 7h14l-1.5 13a2 2 0 0 1-2 1.8h-7a2 2 0 0 1-2-1.8L5 7z" />
-            <path d="M9 7V5a3 3 0 0 1 6 0v2" />
-          </svg>
+          <VairamKolam size={80} />
         </div>
 
         <div className="eyebrow" style={{color: 'var(--magil-ink-soft)'}}>

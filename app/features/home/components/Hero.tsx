@@ -1,6 +1,7 @@
 import {Link} from 'react-router';
 import {PeacockMark} from '~/shared/motifs/PeacockMark';
 import {DoodleUnderline, DoodleArrow} from '~/shared/motifs/DoodleElements';
+import {ThamaraiKolam} from '~/shared/motifs/ThamaraiKolam';
 
 export function Hero() {
   return (
@@ -58,186 +59,16 @@ export function Hero() {
           </div>
         </div>
 
-        {/* Right — hero product illustration */}
+        {/* Right — decorative Thamarai (lotus) kolam */}
         <div className="home-hero__product">
           <div className="home-hero__packshot">
-            <HeroPouch />
+            <ThamaraiKolam size={400} />
           </div>
         </div>
       </div>
 
       <style dangerouslySetInnerHTML={{__html: heroStyles}} />
     </section>
-  );
-}
-
-function HeroPouch() {
-  return (
-    <svg
-      width="280"
-      height="360"
-      viewBox="0 0 280 360"
-      aria-hidden="true"
-      style={{
-        filter: 'drop-shadow(0 20px 60px rgba(43,24,16,0.18))',
-      }}
-    >
-      <defs>
-        <linearGradient id="hero-pouch" x1="0" x2="0" y1="0" y2="1">
-          <stop offset="0" stopColor="#3A1A12" />
-          <stop offset="0.5" stopColor="#1F0808" />
-          <stop offset="1" stopColor="#0D0303" />
-        </linearGradient>
-        <linearGradient id="hero-shine" x1="0" x2="1" y1="0" y2="0">
-          <stop offset="0" stopColor="rgba(255,255,255,0)" />
-          <stop offset="0.3" stopColor="rgba(255,255,255,0.18)" />
-          <stop offset="0.5" stopColor="rgba(255,255,255,0)" />
-          <stop offset="0.7" stopColor="rgba(255,255,255,0.08)" />
-          <stop offset="1" stopColor="rgba(255,255,255,0)" />
-        </linearGradient>
-      </defs>
-      {/* Pouch body */}
-      <path
-        d="M40 24 Q 40 8, 60 8 H 220 Q 240 8, 240 24 V 332 Q 240 350, 220 350 H 60 Q 40 350, 40 332 Z"
-        fill="url(#hero-pouch)"
-      />
-      {/* Top seal */}
-      <path
-        d="M40 24 Q 40 8, 60 8 H 220 Q 240 8, 240 24 V 50 H 40 Z"
-        fill="rgba(0,0,0,0.4)"
-      />
-      {/* Shine */}
-      <path
-        d="M40 24 Q 40 8, 60 8 H 220 Q 240 8, 240 24 V 332 Q 240 350, 220 350 H 60 Q 40 350, 40 332 Z"
-        fill="url(#hero-shine)"
-      />
-      {/* Label */}
-      <rect x="60" y="80" width="160" height="220" rx="6" fill="#FBF6EC" />
-      {/* Peacock motif */}
-      <g transform="translate(140 110)">
-        <ellipse cx="0" cy="0" rx="4" ry="10" fill="#C8102E" />
-        <ellipse
-          cx="-6"
-          cy="-2"
-          rx="3"
-          ry="8"
-          fill="#E8A317"
-          transform="rotate(-20)"
-        />
-        <ellipse
-          cx="6"
-          cy="-2"
-          rx="3"
-          ry="8"
-          fill="#E8A317"
-          transform="rotate(20)"
-        />
-        <circle cx="0" cy="-6" r="3" fill="#8B0E20" />
-      </g>
-      {/* Brand text */}
-      <text
-        x="140"
-        y="148"
-        textAnchor="middle"
-        fontFamily="Satoshi, sans-serif"
-        fontSize="22"
-        fontWeight="700"
-        fill="#8B0E20"
-        letterSpacing="0.04em"
-      >
-        MAGIL
-      </text>
-      <text
-        x="140"
-        y="166"
-        textAnchor="middle"
-        fontFamily="Satoshi, sans-serif"
-        fontSize="9"
-        fontWeight="600"
-        fill="#2B1810"
-        letterSpacing="0.2em"
-      >
-        VILLAGE FOODS
-      </text>
-      {/* Divider */}
-      <line x1="80" y1="180" x2="200" y2="180" stroke="#E8A317" strokeWidth="1" />
-      <circle cx="140" cy="180" r="2.5" fill="#E8A317" />
-      {/* Product name */}
-      <text
-        x="140"
-        y="208"
-        textAnchor="middle"
-        fontFamily="Satoshi, sans-serif"
-        fontSize="20"
-        fontWeight="700"
-        fill="#2B1810"
-        letterSpacing="0.04em"
-      >
-        KABASURA
-      </text>
-      <text
-        x="140"
-        y="226"
-        textAnchor="middle"
-        fontFamily="Satoshi, sans-serif"
-        fontSize="14"
-        fontWeight="600"
-        fill="#5A3A2A"
-        fontStyle="italic"
-      >
-        Kudineer
-      </text>
-      {/* Sub info */}
-      <text
-        x="140"
-        y="268"
-        textAnchor="middle"
-        fontFamily="Satoshi, sans-serif"
-        fontSize="8"
-        fontWeight="500"
-        fill="#5A3A2A"
-        letterSpacing="0.15em"
-      >
-        15 SIDDHA HERBS · IMMUNITY
-      </text>
-      {/* Certification badge */}
-      <circle cx="140" cy="290" r="14" fill="#E8A317" />
-      <text
-        x="140"
-        y="287"
-        textAnchor="middle"
-        fontFamily="Satoshi, sans-serif"
-        fontSize="6"
-        fontWeight="700"
-        fill="#2B1810"
-      >
-        SIDDHA
-      </text>
-      <text
-        x="140"
-        y="295"
-        textAnchor="middle"
-        fontFamily="Satoshi, sans-serif"
-        fontSize="6"
-        fontWeight="700"
-        fill="#2B1810"
-      >
-        CERTIFIED
-      </text>
-      {/* Weight */}
-      <text
-        x="140"
-        y="320"
-        textAnchor="middle"
-        fontFamily="Satoshi, sans-serif"
-        fontSize="9"
-        fontWeight="700"
-        fill="#5A3A2A"
-        letterSpacing="0.1em"
-      >
-        NET 100 g
-      </text>
-    </svg>
   );
 }
 
@@ -433,6 +264,6 @@ const heroStyles = /* css */ `
   .home-hero__packshot svg {
     width: 100%;
     height: auto;
-    max-width: 300px;
+    max-width: 400px;
   }
 `;

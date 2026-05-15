@@ -8,6 +8,7 @@ import {ProofSection} from './ProofSection';
 import {VillageStories} from './VillageStories';
 import {MostLoved} from './MostLoved';
 import {Heritage} from './Heritage';
+import {SectionDivider} from '~/shared/motifs/SectionDivider';
 
 interface HomePageProps {
   products: any[];
@@ -17,13 +18,17 @@ export function HomePage({products}: HomePageProps) {
   return (
     <div>
       <Hero />
+      <SectionDivider />
       <CategoryRow />
       <ValueStrip />
       <TopPicks products={products} />
+      <SectionDivider />
       <FeatureStrip />
       <ShopByConcern />
+      <SectionDivider />
       <ProofSection />
       <VillageStories />
+      <SectionDivider />
       <MostLoved products={products} />
       <Heritage />
     </div>

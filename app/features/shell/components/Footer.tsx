@@ -1,5 +1,6 @@
 import {Link} from 'react-router';
 import {PeacockMark} from '~/shared/motifs/PeacockMark';
+import {KodiBorder} from '~/shared/motifs/KodiBorder';
 import {
   STORE_NAME,
   STORE_TAGLINE,
@@ -17,6 +18,8 @@ import {
 export function Footer() {
   return (
     <footer className="magil-footer">
+      {/* Decorative kolam vine border */}
+      <KodiBorder />
       {/* Decorative wave */}
       <svg
         className="magil-footer__wave"
