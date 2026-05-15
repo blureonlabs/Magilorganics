@@ -69,9 +69,8 @@ export function ShopByConcern() {
           <div className="eyebrow">
             Shop by Concern
           </div>
-          <h2 className="serif shop-concern__heading">
-            What is your body{' '}
-            <em className="shop-concern__accent">asking for</em>?
+          <h2 className="shop-concern__heading">
+            Shop by Health Concern
           </h2>
           <p className="shop-concern__body">
             Pick a concern. We&rsquo;ll guide you to the right Siddha
@@ -97,7 +96,7 @@ export function ShopByConcern() {
               >
                 <c.Icon size={26} style={{color: '#fff'}} />
               </div>
-              <h3 className="serif-bold shop-concern__card-name">{c.name}</h3>
+              <h3 className="shop-concern__card-name">{c.name}</h3>
               <div className="shop-concern__card-footer">
                 <span>{c.count} remedies</span>
                 <span style={{color: c.color, fontWeight: 600}}>
@@ -134,14 +133,11 @@ const shopConcernStyles = /* css */ `
     margin-bottom: 50px;
   }
   .shop-concern__heading {
-    font-size: clamp(32px, 5vw, 56px);
+    font-size: clamp(28px, 5vw, 48px);
+    font-weight: 700;
     margin: 10px 0 14px;
     color: var(--magil-ink);
-    line-height: 1;
-  }
-  .shop-concern__accent {
-    color: var(--magil-red-deep);
-    font-weight: 600;
+    line-height: 1.1;
   }
   .shop-concern__body {
     max-width: 520px;
@@ -200,6 +196,7 @@ const shopConcernStyles = /* css */ `
 
   .shop-concern__card-name {
     font-size: 22px;
+    font-weight: 700;
     margin: 0;
     color: var(--magil-ink);
   }

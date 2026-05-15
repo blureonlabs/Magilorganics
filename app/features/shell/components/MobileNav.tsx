@@ -30,8 +30,13 @@ export function MobileNav({isOpen, onClose}: MobileNavProps) {
         {/* Close header */}
         <div className="magil-mobile-nav__header">
           <div className="magil-mobile-nav__brand">
-            <PeacockMark size={24} />
-            <span className="magil-mobile-nav__brand-name">{STORE_NAME}</span>
+            <img
+              src="/magil-logo.png"
+              alt={STORE_NAME}
+              width="120"
+              height="42"
+              style={{objectFit: 'contain'}}
+            />
           </div>
           <button
             className="magil-mobile-nav__close"

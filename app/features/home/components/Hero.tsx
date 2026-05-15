@@ -139,7 +139,7 @@ function HeroPouch() {
         x="140"
         y="148"
         textAnchor="middle"
-        fontFamily="Cormorant Garamond, serif"
+        fontFamily="Satoshi, sans-serif"
         fontSize="22"
         fontWeight="700"
         fill="#8B0E20"
@@ -167,7 +167,7 @@ function HeroPouch() {
         x="140"
         y="208"
         textAnchor="middle"
-        fontFamily="Cormorant Garamond, serif"
+        fontFamily="Satoshi, sans-serif"
         fontSize="20"
         fontWeight="700"
         fill="#2B1810"
@@ -179,7 +179,7 @@ function HeroPouch() {
         x="140"
         y="226"
         textAnchor="middle"
-        fontFamily="Cormorant Garamond, serif"
+        fontFamily="Satoshi, sans-serif"
         fontSize="14"
         fontWeight="600"
         fill="#5A3A2A"
@@ -288,8 +288,7 @@ const heroStyles = /* css */ `
 
   /* Heading */
   .home-hero__heading {
-    font-family: var(--font-display);
-    font-weight: 500;
+    font-weight: 700;
     font-size: 36px;
     line-height: 1.1;
     letter-spacing: -0.02em;
@@ -315,9 +314,8 @@ const heroStyles = /* css */ `
   .home-hero__heading-accent {
     font-style: italic;
     color: var(--magil-red-deep);
-    font-family: var(--font-display);
     position: relative;
-    font-weight: 600;
+    font-weight: 700;
     display: inline-block;
   }
   .home-hero__underline {

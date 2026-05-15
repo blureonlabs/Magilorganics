@@ -1,5 +1,4 @@
 import {PeacockMark} from '~/shared/motifs/PeacockMark';
-import {DoodleUnderline, DoodleLeaf} from '~/shared/motifs/DoodleElements';
 
 export function Heritage() {
   return (
@@ -7,40 +6,27 @@ export function Heritage() {
       <div className="heritage__inner">
         <div className="eyebrow">A letter from the family</div>
 
-        <div className="serif heritage__quote-mark">&ldquo;</div>
+        <div className="heritage__quote-mark">&ldquo;</div>
 
-        <p className="serif heritage__quote">
+        <p className="heritage__quote">
           My grandmother brewed Kabasura on a clay stove behind her house in
           Karaikudi. She didn&rsquo;t measure herbs &mdash; she{' '}
           <em className="heritage__accent">knew</em> them. We built Magil to
           bring that knowing into your home, untouched.
         </p>
 
-        {/* Hand-drawn underline accent under the quote */}
-        <div style={{display: 'flex', justifyContent: 'center', marginTop: 20}}>
-          <DoodleUnderline width={160} color="var(--magil-gold)" strokeWidth={1.5} />
-        </div>
-
         <div className="feather-divider heritage__divider">
           <PeacockMark size={28} />
         </div>
 
         <div>
-          <div className="serif-bold heritage__author">
+          <div className="heritage__author">
             Karthik Subramaniam
           </div>
-          <div className="heritage__title doodle-text">
+          <div className="heritage__title">
             FOUNDER &middot; 4th GENERATION SIDDHA FAMILY &middot; KARAIKUDI
           </div>
         </div>
-      </div>
-
-      {/* Decorative doodle leaves — subtle accents */}
-      <div style={{position: 'absolute', top: '15%', left: '5%', opacity: 0.12, pointerEvents: 'none'}} aria-hidden="true">
-        <DoodleLeaf width={24} color="var(--magil-leaf)" />
-      </div>
-      <div style={{position: 'absolute', bottom: '18%', right: '6%', opacity: 0.10, pointerEvents: 'none', transform: 'rotate(45deg)'}} aria-hidden="true">
-        <DoodleLeaf width={20} color="var(--magil-leaf)" />
       </div>
 
       <style dangerouslySetInnerHTML={{__html: heritageStyles}} />
@@ -79,7 +65,7 @@ const heritageStyles = /* css */ `
     line-height: 1.3;
     color: var(--magil-ink);
     font-weight: 500;
-    letter-spacing: -0.01em;
+    letter-spacing: normal;
     margin: 0;
     font-style: italic;
   }
@@ -95,13 +81,15 @@ const heritageStyles = /* css */ `
 
   .heritage__author {
     font-size: 22px;
+    font-weight: 600;
     color: var(--magil-ink);
   }
   .heritage__title {
     font-size: 13px;
+    font-weight: 600;
     color: var(--magil-ink-soft);
     margin-top: 4px;
-    letter-spacing: 0.08em;
+    letter-spacing: normal;
   }
 
 `;

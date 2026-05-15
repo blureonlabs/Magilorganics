@@ -6,17 +6,13 @@ export function FeatureStrip() {
           <div className="eyebrow" style={{color: 'var(--magil-gold)'}}>
             The Magil Promise
           </div>
-          <h2 className="serif feature-strip__heading">
-            For anyone seeking{' '}
-            <em className="feature-strip__accent">real medicine</em> from real
-            soil.
+          <h2 className="feature-strip__heading">
+            Real medicine.{' '}
+            <em className="feature-strip__accent">Real soil.</em>
           </h2>
           <p className="feature-strip__body">
-            If you&rsquo;re tired of synthetic supplements, polished promises
-            and &ldquo;Ayurvedic-inspired&rdquo; mass production &mdash; these
-            are for you. Our formulations come from Siddha texts, our
-            ingredients from named farmers, and our quality from your
-            grandmother&rsquo;s standards.
+            Siddha formulations from ancient texts. Ingredients from named
+            farmers. Quality your grandmother would approve of.
           </p>
 
           <div className="feature-strip__stats">
@@ -26,7 +22,7 @@ export function FeatureStrip() {
               ['FSSC 22000', 'World-class hygiene'],
             ].map(([h, s]) => (
               <div key={h} className="feature-strip__stat">
-                <div className="serif-bold feature-strip__stat-heading">
+                <div className="feature-strip__stat-heading">
                   {h}
                 </div>
                 <div className="feature-strip__stat-sub">{s}</div>
@@ -43,11 +39,11 @@ export function FeatureStrip() {
 
 const featureStripStyles = /* css */ `
   .feature-strip-section {
-    padding: 80px 24px;
+    padding: 60px 24px;
     background: var(--magil-cream);
   }
   @media (min-width: 768px) {
-    .feature-strip-section { padding: 80px 48px; }
+    .feature-strip-section { padding: 60px 48px; }
   }
 
   .feature-strip {
@@ -55,13 +51,13 @@ const featureStripStyles = /* css */ `
     margin: 0 auto;
     background: linear-gradient(110deg, var(--magil-ink) 0%, var(--magil-red-deep) 100%);
     border-radius: 32px;
-    padding: 50px 32px;
+    padding: 40px 28px;
     color: var(--magil-cream);
     position: relative;
     overflow: hidden;
   }
   @media (min-width: 768px) {
-    .feature-strip { padding: 70px 80px; }
+    .feature-strip { padding: 56px 64px; }
   }
 
   .feature-strip__content {
@@ -70,9 +66,10 @@ const featureStripStyles = /* css */ `
   }
 
   .feature-strip__heading {
-    font-size: clamp(28px, 5vw, 64px);
-    line-height: 1;
-    margin: 10px 0 24px;
+    font-size: clamp(28px, 5vw, 56px);
+    font-weight: 700;
+    line-height: 1.1;
+    margin: 10px 0 20px;
     color: var(--magil-cream);
   }
   .feature-strip__accent {
@@ -90,9 +87,15 @@ const featureStripStyles = /* css */ `
 
   .feature-strip__stats {
     display: flex;
-    gap: 36px;
-    margin-top: 36px;
-    flex-wrap: wrap;
+    flex-direction: column;
+    gap: 20px;
+    margin-top: 32px;
+  }
+  @media (min-width: 768px) {
+    .feature-strip__stats {
+      flex-direction: row;
+      gap: 36px;
+    }
   }
   .feature-strip__stat {
     border-left: 1px solid var(--magil-gold);
@@ -100,6 +103,7 @@ const featureStripStyles = /* css */ `
   }
   .feature-strip__stat-heading {
     font-size: 18px;
+    font-weight: 700;
     color: var(--magil-gold-light);
   }
   .feature-strip__stat-sub {

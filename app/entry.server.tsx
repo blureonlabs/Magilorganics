@@ -22,12 +22,10 @@ export default async function handleRequest(
     styleSrc: [
       "'self'",
       'https://cdn.shopify.com',
-      'https://fonts.googleapis.com',
       'https://api.fontshare.com',
     ],
     fontSrc: [
       "'self'",
-      'https://fonts.gstatic.com',
       'https://cdn.shopify.com',
       'https://cdn.fontshare.com',
     ],

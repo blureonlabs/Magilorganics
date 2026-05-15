@@ -50,11 +50,11 @@
   --magil-shadow-lg:  0 12px 40px rgba(139, 14, 32, 0.12);
 
   /* Type */
-  --font-display: "Cormorant Garamond", "Tiro Tamil", Georgia, serif;
+  --font-display: "Satoshi", sans-serif;
   --font-body:    "Satoshi", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   --font-tamil:   "Hind Madurai", "Catamaran", sans-serif;
-  --font-script:  "Caveat", "Kalam", cursive;
-  --font-doodle:  "Delius Swash Caps", cursive;
+  --font-script:  "Satoshi", sans-serif;
+  --font-doodle:  "Satoshi", sans-serif;
 }
 
 /* ---- Responsive breakpoints ---- */
@@ -86,8 +86,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 /* Typography helpers */
 .serif        { font-family: var(--font-display); font-weight: 500; letter-spacing: -0.01em; }
 .serif-bold   { font-family: var(--font-display); font-weight: 700; letter-spacing: -0.01em; }
-.script       { font-family: var(--font-script); font-weight: 500; }
-.doodle-text  { font-family: var(--font-doodle); letter-spacing: 0.02em; }
+.script       { font-family: var(--font-body); font-weight: 500; }
+.doodle-text  { font-family: var(--font-body); font-weight: 500; letter-spacing: 0.02em; }
 .eyebrow      {
   font-family: var(--font-body);
   font-size: 12px;
@@ -147,7 +147,8 @@ button { font-family: inherit; cursor: pointer; border: none; background: none; 
 
 /* Doodle accent text */
 .doodle-text {
-  font-family: var(--font-doodle);
+  font-family: var(--font-body);
+  font-weight: 500;
   letter-spacing: 0.02em;
 }
 

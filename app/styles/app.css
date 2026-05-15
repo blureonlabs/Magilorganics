@@ -717,8 +717,8 @@ button.reset:hover:not(:has(> *)) {
 
 @media (max-width: 768px) {
   .magil-header__inner {
-    padding: 12px 16px 0;
-    gap: 12px;
+    padding: 16px 16px 4px;
+    gap: 16px;
   }
 }
 
@@ -1128,19 +1128,19 @@ button.reset:hover:not(:has(> *)) {
 .magil-footer__inner {
   max-width: 1440px;
   margin: 0 auto;
-  padding: 0 48px 60px;
+  padding: 0 48px 32px;
 }
 
 @media (max-width: 768px) {
   .magil-footer__inner {
-    padding: 0 20px 40px;
+    padding: 0 20px 24px;
   }
 }
 
 /* Newsletter */
 .magil-footer__newsletter {
   text-align: center;
-  margin-bottom: 60px;
+  margin-bottom: 32px;
 }
 
 .magil-footer__eyebrow {
