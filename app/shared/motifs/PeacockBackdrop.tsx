@@ -16,7 +16,7 @@ export function PeacockBackdrop({className}: PeacockBackdropProps) {
           right: -40,
           width: 560,
           height: 560,
-          opacity: 0.12,
+          opacity: 0.07,
           zIndex: 1,
           pointerEvents: 'none',
         }}
