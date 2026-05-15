@@ -53,6 +53,27 @@ export function PaginationControls({
 }
 
 const paginationStyles = /* css */ `
+  .magil-product-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    width: 100%;
+  }
+
+  @media (min-width: 768px) {
+    .magil-product-grid {
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .magil-product-grid {
+      grid-template-columns: repeat(4, 1fr);
+      gap: 24px;
+    }
+  }
+
   .magil-pagination-wrap {
     display: flex;
     flex-direction: column;
