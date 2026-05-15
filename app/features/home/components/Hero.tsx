@@ -14,11 +14,9 @@ export function Hero() {
           </div>
 
           <h1 className="home-hero__heading">
-            Pure cold-pressed oils
-            <br />
-            &amp;{' '}
+            Cold-pressed oils &{' '}
             <em className="home-hero__heading-accent">
-              Siddha wellness
+              herbal wellness
               <span className="home-hero__underline">
                 <DoodleUnderline
                   width="100%"
@@ -27,24 +25,21 @@ export function Hero() {
                 />
               </span>
             </em>
-            , from
-            <br />
-            our village to your home.
+            {' '}from our village.
           </h1>
 
           <p className="home-hero__body">
-            Farm-sourced ingredients. Traditional Siddha formulations. Every
-            product is made with care — cold-pressed in granite urals,
-            sun-dried herbs, and time-tested recipes passed down through
-            generations.
+            Farm-sourced. Hand-prepared. Trusted by 12,000+ families.
+            Cold-pressed oils, Siddha herbal powders, thailams and
+            juices — made the traditional way in Paramathi Velur.
           </p>
 
           <div className="home-hero__cta">
-            <Link to="/collections/all" className="btn btn-vibrant-red">
+            <Link to="/collections" className="btn btn-vibrant-red">
               Shop All Products <DoodleArrow width={18} color="#fff" />
             </Link>
-            <Link to="/collections" className="btn btn-outline">
-              Explore Collections
+            <Link to="/concerns" className="btn btn-outline">
+              Shop by Concern
             </Link>
           </div>
 
