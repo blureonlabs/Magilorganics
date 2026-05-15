@@ -753,12 +753,12 @@ button.reset:hover:not(:has(> *)) {
   }
 }
 
-/* Search pill */
-.magil-header__search-link {
-  text-decoration: none;
-  color: inherit;
+/* Search wrap — positions dropdown */
+.magil-header__search-wrap {
+  position: relative;
 }
 
+/* Search pill */
 .magil-header__search-pill {
   display: flex;
   align-items: center;
@@ -770,34 +770,89 @@ button.reset:hover:not(:has(> *)) {
   width: 320px;
   max-width: 100%;
   color: var(--magil-ink-soft);
-  cursor: pointer;
+  cursor: text;
   transition: border-color 0.2s ease;
 }
 
-.magil-header__search-pill:hover {
+.magil-header__search-pill:hover,
+.magil-header__search-pill--active {
   border-color: var(--magil-gold);
 }
 
-.magil-header__search-placeholder {
+.magil-header__search-input {
+  flex: 1;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
   font-size: 14px;
+  color: var(--magil-ink);
+  padding: 0;
+  min-width: 0;
+}
+
+.magil-header__search-input::placeholder {
   color: var(--magil-ink-soft);
 }
 
 @media (max-width: 768px) {
-  .magil-header__search-link {
+  .magil-header__search-wrap {
     display: none;
   }
 }
 
-/* Search icon for mobile */
+/* Search icon button for mobile */
 .magil-header__search-mobile {
   display: none !important;
+  background: transparent;
+  border: none;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
   .magil-header__search-mobile {
     display: flex !important;
   }
+}
+
+/* Mobile search bar */
+.magil-header__mobile-search-bar {
+  display: none;
+  position: relative;
+  padding: 0 16px 12px;
+  background: var(--magil-paper);
+}
+
+@media (max-width: 768px) {
+  .magil-header__mobile-search-bar {
+    display: block;
+  }
+}
+
+.magil-header__mobile-search-inner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 16px;
+  border: 1.5px solid var(--magil-gold);
+  border-radius: 999px;
+  background: #fff;
+}
+
+.magil-header__mobile-search-inner svg {
+  flex-shrink: 0;
+  color: var(--magil-ink-soft);
+}
+
+.magil-header__mobile-search-close {
+  flex-shrink: 0;
+  background: transparent;
+  border: none;
+  font-size: 22px;
+  color: var(--magil-ink-soft);
+  cursor: pointer;
+  padding: 0 4px;
+  line-height: 1;
 }
 
 /* Center: logo */

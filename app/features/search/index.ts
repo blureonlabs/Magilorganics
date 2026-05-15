@@ -1,4 +1,5 @@
 export {SearchPage} from './components/SearchPage';
+export {PredictiveSearch} from './components/PredictiveSearch';
 export {SearchHero} from './components/SearchHero';
 export {SearchFilters} from './components/SearchFilters';
 export {SearchResultsGrid} from './components/SearchResults';
